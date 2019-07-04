@@ -52,12 +52,9 @@ class CollectionView<Section,Item>: UICollectionView, UICollectionViewDataSource
                      height: CGFloat? = nil,
                      isSquare: Bool = false,
                      isDynamic: Bool = false) {
-        var flowLayout: UICollectionViewFlowLayout
+        let flowLayout = UICollectionViewFlowLayout()
         if isDynamic {
-            flowLayout = LeftAlignedCollectionViewFlowLayout()
-            flowLayout.estimatedItemSize = CGSize(width: 1, height: 1)
-        } else {
-            flowLayout = UICollectionViewFlowLayout()
+            flowLayout.itemSize = UICollectionViewFlowLayout.automaticSize
         }
         flowLayout.scrollDirection = scrollDirection
         self.init(frame: .zero, collectionViewLayout: flowLayout)

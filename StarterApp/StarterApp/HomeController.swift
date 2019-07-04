@@ -10,7 +10,7 @@ import UIKit
 
 extension RawRepresentable where Self: CaseIterable, Self.RawValue == String {
     static var strings: [String] {
-        return allCases.map({ $0.rawValue })
+        return allCases.map({ $0.rawValue.capitalized })
     }
 }
 
