@@ -9,12 +9,26 @@
 import UIKit
 
 extension UIViewController {
-    enum Transition {
-        case root, push, present, child, popToRootAndPresent, dismissAndPush, overlay
+    
+    enum Scene {
+        case home, welcome, plant, plantDetail(Plant)
     }
     
-    enum Scene: Equatable {
-        case home, welcome
+    static func controller(_ scene: Scene) -> ViewController {
+        switch scene {
+        case .home:
+            return HomeController()
+        case .welcome:
+            return WelcomeController()
+        case .plant:
+            return PlantController()
+        case let .plantDetail(plant):
+            return PlantDetailController(plant)
+        }
+    }
+    
+    enum Transition {
+        case root, push, present, child, popToRootAndPresent, dismissAndPush, overlay
     }
     
     func navigate(to scene: Scene, transition: Transition, delegate: Delegate? = nil) {
@@ -42,15 +56,6 @@ extension UIViewController {
         case .overlay:
             ctlr.modalPresentationStyle = .overCurrentContext
             present(ctlr, animated: true)
-        }
-    }
-    
-    static func controller(_ scene: Scene) -> ViewController {
-        switch scene {
-        case .home:
-            return HomeController()
-        case .welcome:
-            return WelcomeController()
         }
     }
     

@@ -39,7 +39,7 @@ class HomeController: ViewController, WelcomeDelegate {
         $0.register(HomeTableCell.self)
         $0.header = { [weak self] table, index, item in
             return UILabel().then {
-                $0.style(.header, color: .white, bgColor: .purple, alignment: .center)
+                $0.style(font: .header(16), color: .white, bgColor: .purple, alignment: .center)
                 $0.text = sections[index]
                 $0.addGesture(UITapGestureRecognizer { _ in
                     table.toggle(index)
@@ -105,7 +105,7 @@ class WelcomeController: ViewController {
         stack = view.vStack(UIView())
         stack.spacing = 10
         close.top(60).left(20).circle(40)
-        stack.centerHorizontally().width(multiplier: 0.8).top(50)
+        stack.centerHorizontally().width(0.8).top(50)
         addLabel()
     }
     
@@ -120,7 +120,7 @@ class WelcomeController: ViewController {
         let text = texts[currentText]
         var index = 0
         let label = UILabel().then {
-            $0.style(.header, color: .white, alignment: .center)
+            $0.style(font: .header(16), color: .white, alignment: .center)
             $0.height(60)
             $0.multiLine()
         }
@@ -149,7 +149,7 @@ class WelcomeController: ViewController {
             $0.delegate = self
         }
         stack.add(textField)
-        textField.top(0).bottom(0).centerHorizontally().width(multiplier: 0.6).roundedEdges(40)
+        textField.top(0).bottom(0).centerHorizontally().width(0.6).roundedEdges(40)
         textField.becomeFirstResponder()
     }
 }

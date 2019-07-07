@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func appLaunched() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: UIViewController.controller(.home))
+        window?.rootViewController = UINavigationController(rootViewController: UIViewController.controller(.plant))
             .then {
             $0.isNavigationBarHidden = true
         }
