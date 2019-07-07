@@ -57,14 +57,38 @@ class Plant {
     }
 }
 
+class PlantViewModel {
+    static var update: (() -> Void)?
+    private(set) var data: [Plant] {
+        didSet {
+            PlantViewModel.update?()
+        }
+    }
+    private let original = PlantType.allCases.map { Plant(name: $0.name, image: $0.image, desc: $0.desc) }
+    
+    init() {
+        data = original
+    }
+    
+    func query(_ text: String?) {
+        guard let text = text, !text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            data = original
+            return
+        }
+        data = original.filter { $0.name.lowercased().contains(text.lowercased()) }
+    }
+}
+
 class PlantController: ViewController {
+    
+    let viewModel = PlantViewModel()
     
     lazy var tableView = TableView<String,Plant>().then {
         $0.separatorStyle = .none
         $0.register(PlantCell.self)
         $0.configureCell = { $0.dequeueCell(PlantCell.self, at: $1, with: $2) }
         $0.didSelect = { [weak self] in self?.navigate(to: .plantDetail($2), transition: .push) }
-        $0.update(List.dataSource(sections: .empty, items: [PlantType.allCases.map { Plant(name: $0.name, image: $0.image, desc: $0.desc) }]))
+        $0.update(List.dataSource(sections: .empty, items: [viewModel.data]))
     }
     
     override func render() {
@@ -74,7 +98,12 @@ class PlantController: ViewController {
             $0.isUserInteractionEnabled = true
         }
         let blur = UIVisualEffectView(effect: UIBlurEffect(style: .light))
-        let textfield = TextField(left: 16, color: .black).then { $0.attributedPlaceholder = .text("Search", font: .title(18), color: #colorLiteral(red: 0.6574715376, green: 0.7316547036, blue: 0.734709084, alpha: 1)) }
+        let textfield = TextField(left: 16, color: .black).then {
+            $0.attributedPlaceholder = .text("Search", font: .title(18), color: #colorLiteral(red: 0.6574715376, green: 0.7316547036, blue: 0.734709084, alpha: 1))
+            $0.on(.editingChanged) { [weak self] in
+                self?.viewModel.query($0.text)
+            }
+        }
         let label = Label().then { $0.style("Flower\nSchool", font: .header(40), color: .white, isMultiLine: true) }
         view.sv(bgImage.sv(label, blur, textfield), tableView)
         bgImage.top(44).left(10).right(10).heightEqualsWidth()
@@ -84,6 +113,10 @@ class PlantController: ViewController {
         textfield.followEdges(blur)
         tableView.left(25).right(10).bottom(0)
         tableView.Top == textfield.Bottom + 20
+        PlantViewModel.update = { [weak self] in
+            guard let `self` = self else { return }
+            self.tableView.update(List.dataSource(sections: .empty, items: [self.viewModel.data]))
+        }
     }
     
     override func configureUI() {
@@ -152,15 +185,6 @@ class PlantDetailController: ViewController {
         $0.style(imageName: "share")
     }
     
-    lazy var plantImageView = UIImageView().then {
-        let overlay = UIView().then { $0.backgroundColor = UIColor.black.withAlphaComponent(0.1) }
-        $0.sv(overlay)
-        overlay.fillContainer()
-        $0.style(plant.image, mode: .scaleAspectFit, bgColor: .plantBG)
-        $0.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 30)
-        $0.isUserInteractionEnabled = true
-    }
-    
     let detailView = UIView().then {
         $0.backgroundColor = .white
         $0.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 40)
@@ -185,7 +209,15 @@ class PlantDetailController: ViewController {
     
     lazy var descLabel = UILabel().then { $0.style(plant.desc, font: .title(18), color: .plantColor, isMultiLine: true) }
     
-    let collectionView = CollectionView<Any,UIColor>(.horizontal, animator: .cube).then {
+    lazy var imageCarousel = CollectionView<Any,String>(.horizontal, animator: .cube).then {
+        $0.isPagingEnabled = true
+        $0.register(PlantImageCell.self)
+        $0.configureCell = { $0.dequeueCell(PlantImageCell.self, at: $1, with: $2) }
+        $0.didScrollToIndex = { [weak self] in self?.pageControl.currentPage = $0.row }
+        $0.update(List.dataSource(sections: .empty, items: [Array(repeating: plant.image, count: 3)]))
+    }
+    
+    let collectionView = CollectionView<Any,UIColor>(.horizontal, animator: .card, widthFactor: 0.8).then {
         $0.isPagingEnabled = true
         $0.register(PlantCollectionCell.self)
         $0.configureCell = { $0.dequeueCell(PlantCollectionCell.self, at: $1, with: $2) }
@@ -200,14 +232,14 @@ class PlantDetailController: ViewController {
     }
     
     override func render() {
-        view.sv(plantImageView.sv(back, share), detailView, favButton, pageControl)
+        view.sv(imageCarousel, detailView, favButton, pageControl, back, share)
         detailView.vStack(titleLabel, descLabel, collectionView).fillContainer()
-        plantImageView.top(44).left(10).right(10).heightEqualsWidth()
+        imageCarousel.top(44).left(10).right(10).heightEqualsWidth()
         detailView.left(10).right(10).bottom(0)
         collectionView.height(200).bottom(20).fill()
-        plantImageView.Bottom == detailView.Top + 40
-        back.size(24).top(20).left(30)
-        share.size(30).top(20).right(30)
+        imageCarousel.Bottom == detailView.Top + 40
+        back.size(24).top(60).left(30)
+        share.size(30).top(60).right(30)
         titleLabel.top(20).left(20).right(20).bottom(0)
         descLabel.left(20).right(20).top(10).bottom(0)
         favButton.size(52).right(10%)
@@ -228,5 +260,25 @@ class PlantCollectionCell: CollectionViewCell, Configurable {
     
     func configure(_ item: UIColor) {
         card.backgroundColor = item
+    }
+}
+
+class PlantImageCell: CollectionViewCell, Configurable {
+    
+    lazy var plantImageView = UIImageView().then {
+        let overlay = UIView().then { $0.backgroundColor = UIColor.black.withAlphaComponent(0.1) }
+        $0.sv(overlay)
+        overlay.fillContainer()
+        $0.style(mode: .scaleAspectFit)
+        $0.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 30)
+    }
+    
+    override func render() {
+        sv(plantImageView)
+        plantImageView.fill()
+    }
+    
+    func configure(_ item: String) {
+        plantImageView.image(item)
     }
 }
