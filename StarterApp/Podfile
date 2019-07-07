@@ -8,4 +8,5 @@ target 'StarterApp' do
   # Pods for StarterApp
 pod 'SteviaLayout'
 pod 'AnimatedCollectionViewLayout'
+pod "ViewAnimator"
 end

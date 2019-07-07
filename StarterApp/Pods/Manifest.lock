@@ -1,20 +1,24 @@
 PODS:
   - AnimatedCollectionViewLayout (0.6.0)
   - SteviaLayout (4.5.0)
+  - ViewAnimator (2.5.1)
 
 DEPENDENCIES:
   - AnimatedCollectionViewLayout
   - SteviaLayout
+  - ViewAnimator
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - AnimatedCollectionViewLayout
     - SteviaLayout
+    - ViewAnimator
 
 SPEC CHECKSUMS:
   AnimatedCollectionViewLayout: f2c4e8dda4e3f1678ad6c0b39273a31b19bc935d
   SteviaLayout: aa64a62810544348c9e328a6521cb9160fa82ec6
+  ViewAnimator: 173932c659a43c5a15c665878750d92801ae2cf1
 
-PODFILE CHECKSUM: 54d4d71de41ee8bb1dea72783810f53d4bd17d90
+PODFILE CHECKSUM: 5d29670cd2b7b969cc549994e7935a1aaaf33af9
 
 COCOAPODS: 1.5.3

@@ -18,6 +18,12 @@ extension NSObject {
                             callback()
         }
     }
+    
+    func AsyncAfter(_ value: Double, closure: @escaping () -> Void) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + Double(Int64(value * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)) {
+            closure()
+        }
+    }
 }
 
 extension Optional {
@@ -255,6 +261,9 @@ extension UIFont {
     }
     static func title(_ size: CGFloat) -> UIFont {
         return UIFont.systemFont(ofSize: size, weight: .regular)
+    }
+    static func medium(_ size: CGFloat) -> UIFont {
+        return UIFont.systemFont(ofSize: size, weight: .medium)
     }
 }
 

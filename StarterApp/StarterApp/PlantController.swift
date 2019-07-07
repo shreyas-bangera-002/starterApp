@@ -8,11 +8,27 @@
 
 import UIKit
 import Stevia
+import ViewAnimator
 
 extension UIColor {
     static let plantBG = #colorLiteral(red: 0.9255588055, green: 0.9253922701, blue: 0.9339988828, alpha: 1)
     static let plantColor = #colorLiteral(red: 0.1960784346, green: 0.3411764801, blue: 0.1019607857, alpha: 1)
     static let favBG = #colorLiteral(red: 0.6310636401, green: 0.7705437541, blue: 0.6404860616, alpha: 1)
+    static let light = #colorLiteral(red: 0.1521505713, green: 0.2935601175, blue: 0.2960677743, alpha: 1)
+    static let temp = #colorLiteral(red: 0.2951364517, green: 0.443002224, blue: 0.4495908618, alpha: 1)
+    static let water = UIColor.temp
+}
+
+enum Criteria: String {
+    case light, temp = "temperature", water
+    
+    var value: String {
+        return rawValue.capitalized
+    }
+    
+    var image: String {
+        return rawValue
+    }
 }
 
 enum PlantType: String, CaseIterable {
@@ -29,11 +45,42 @@ enum PlantType: String, CaseIterable {
     var desc: String {
         switch self {
         case .monstera:
-            return "Monstera deliciosa, the ceriman, is a species of flowering plant native to tropical forests of southern Mexico, south to Panama.[1] It has been introduced to many tropical areas, and has become a mildly invasive species in Hawaii, Seychelles, Ascension Island and the Society Islands."
+            return "Monstera deliciosa, the ceriman, is a species of flowering plant native to tropical forests of southern Mexico, south to Panama."
         case .suculents:
-            return "In botany, succulent plants, also known as succulents, are plants that have some parts that are more than normally thickened and fleshy, usually to retain water in arid climates or soil conditions. The word \"succulent\" comes from the Latin word sucus, meaning juice, or sap.[1] Succulent plants may store water in various structures, such as leaves and stems. Some definitions also include roots, thus geophytes that survive unfavorable periods by dying back to underground storage organs may be regarded as succulents."
+            return "In botany, succulent plants, also known as succulents, are plants that have some parts that are more than normally thickened and fleshy, usually to retain water in arid climates or soil conditions."
         case .ferns:
-            return "A fern is a member of a group of vascular plants (plants with xylem and phloem) that reproduce via spores and have neither seeds nor flowers. They differ from mosses by being vascular, i.e., having specialized tissues that conduct water and nutrients and in having life cycles in which the sporophyte is the dominant phase. Ferns have complex leaves called megaphylls, that are more complex than the microphylls of clubmosses. Most ferns are leptosporangiate ferns, sometimes referred to as true ferns. They produce coiled fiddleheads that uncoil and expand into fronds.[3] The group includes about 10,560 known extant species."
+            return "A fern is a member of a group of vascular plants (plants with xylem and phloem) that reproduce via spores and have neither seeds nor flowers."
+        }
+    }
+    
+    var temperature: String {
+        switch self {
+        case .monstera:
+            return "18-25°C"
+        case .suculents:
+            return "35-40°F"
+        case .ferns:
+            return "15–24°C"
+        }
+    }
+    
+    var light: String {
+        switch self {
+        case .monstera, .suculents:
+            return "Diffused"
+        case .ferns:
+            return "Bright"
+        }
+    }
+    
+    var water: String {
+        switch self {
+        case .monstera:
+            return "Minimal"
+        case .suculents:
+            return "Soaked"
+        case .ferns:
+            return "Moist"
         }
     }
 }
@@ -42,6 +89,9 @@ class Plant {
     let name: String
     let image: String
     let desc: String
+    let temperature: String
+    let light: String
+    let water: String
     var isFav: Bool = false
     var favImage: String {
         return isFav ? "favorite" : "unfavorite"
@@ -49,13 +99,25 @@ class Plant {
     var favTint: UIColor {
         return isFav ? .red : .black
     }
+    var nourishment: [PlantNourishment] {
+        return [
+            (.temp, .temp, temperature),
+            (.light, .light, light),
+            (.water, .water, water)
+        ]
+    }
     
-    init(name: String, image: String, desc: String) {
+    init(name: String, image: String, desc: String, temperature: String, light: String, water: String) {
         self.name = name
         self.image = image
         self.desc = desc
+        self.temperature = temperature
+        self.light = light
+        self.water = water
     }
 }
+
+typealias PlantNourishment = (color: UIColor, criteria: Criteria, value: String)
 
 class PlantViewModel {
     static var update: (() -> Void)?
@@ -64,7 +126,7 @@ class PlantViewModel {
             PlantViewModel.update?()
         }
     }
-    private let original = PlantType.allCases.map { Plant(name: $0.name, image: $0.image, desc: $0.desc) }
+    private let original = PlantType.allCases.map { Plant(name: $0.name, image: $0.image, desc: $0.desc, temperature: $0.temperature, light: $0.light, water: $0.water) }
     
     init() {
         data = original
@@ -145,6 +207,7 @@ class PlantCell: TableViewCell, Configurable {
             guard let plant = self?.plant else { return }
             plant.isFav.toggle()
             $0.image(plant.favImage, tint: plant.favTint)
+            $0.animate(animations: [AnimationType.zoom(scale: plant.isFav ? 1.5 : 1)], duration: 1)
         }
     }
     
@@ -204,6 +267,7 @@ class PlantDetailController: ViewController {
             guard let plant = self?.plant else { return }
             plant.isFav.toggle()
             fav.style(plant.favImage, tint: plant.favTint)
+            fav.animate(animations: [AnimationType.zoom(scale: plant.isFav ? 1.5 : 1)], duration: 1)
         }
     }
     
@@ -215,13 +279,15 @@ class PlantDetailController: ViewController {
         $0.configureCell = { $0.dequeueCell(PlantImageCell.self, at: $1, with: $2) }
         $0.didScrollToIndex = { [weak self] in self?.pageControl.currentPage = $0.row }
         $0.update(List.dataSource(sections: .empty, items: [Array(repeating: plant.image, count: 3)]))
+        $0.animate(animations: [AnimationType.zoom(scale: 0.3)], delay: 0.5)
     }
     
-    let collectionView = CollectionView<Any,UIColor>(.horizontal, animator: .card, widthFactor: 0.8).then {
-        $0.isPagingEnabled = true
+    lazy var collectionView = CollectionView<Any,PlantNourishment>(.horizontal, animator: .none, width: 200).then {
+        $0.contentInset.left = 20
         $0.register(PlantCollectionCell.self)
         $0.configureCell = { $0.dequeueCell(PlantCollectionCell.self, at: $1, with: $2) }
-        $0.update(List.dataSource(sections: .empty, items: [[.favBG, .plantBG, .favBG, .plantBG]]))
+        $0.update(List.dataSource(sections: .empty, items: [plant.nourishment]))
+        $0.animate(animations: [AnimationType.from(direction: .right, offset: 80)], delay: 0.3)
     }
     
     var plant: Plant!
@@ -232,11 +298,13 @@ class PlantDetailController: ViewController {
     }
     
     override func render() {
+        let tips = UILabel().then { $0.style("Tips", font: .medium(18), color: .plantColor) }
         view.sv(imageCarousel, detailView, favButton, pageControl, back, share)
-        detailView.vStack(titleLabel, descLabel, collectionView).fillContainer()
+        detailView.vStack(titleLabel, descLabel, tips, collectionView).fillContainer()
         imageCarousel.top(44).left(10).right(10).heightEqualsWidth()
         detailView.left(10).right(10).bottom(0)
-        collectionView.height(200).bottom(20).fill()
+        tips.height(40).left(20).fill()
+        collectionView.height(240).bottom(20).fill()
         imageCarousel.Bottom == detailView.Top + 40
         back.size(24).top(60).left(30)
         share.size(30).top(60).right(30)
@@ -253,13 +321,29 @@ class PlantCollectionCell: CollectionViewCell, Configurable {
     
     let card = UIView().then { $0.layer.cornerRadius = 8 }
     
-    override func render() {
-        sv(card)
-        card.fillContainer(10)
+    let image = UIImageView().then {
+        $0.style(mode: .scaleAspectFit)
+        $0.animate(animations: [AnimationType.rotate(angle: 360)], delay: 0.3, duration: 1)
     }
     
-    func configure(_ item: UIColor) {
-        card.backgroundColor = item
+    let criteriaLabel = UILabel().then { $0.style(font: .title(16), color: UIColor.white.withAlphaComponent(0.5)) }
+    
+    let valueLabel = UILabel().then { $0.style(font: .header(24), color: .white) }
+    
+    override func render() {
+        sv(card.sv(image, criteriaLabel, valueLabel))
+        card.fillContainer(10)
+        image.size(44).top(20).left(10)
+        criteriaLabel.left(20).right(10)
+        valueLabel.left(20).right(10).bottom(10)
+        criteriaLabel.Bottom == valueLabel.Top - 4
+    }
+    
+    func configure(_ item: PlantNourishment) {
+        card.backgroundColor = item.color
+        image.image(item.criteria.image)
+        criteriaLabel.text = item.criteria.value
+        valueLabel.text = item.value
     }
 }
 

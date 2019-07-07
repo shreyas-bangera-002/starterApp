@@ -7,122 +7,153 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		03C463CFAFA72ADEFBD0079847FC6BC2 /* Pods-StarterApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3407B5E3657B1BFD0E7ECE5554E29C6B /* Pods-StarterApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		10C577FED05A212F1CD7D4D59E08F7B0 /* Stevia+LayoutAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F78F4B87BB658C9684B331B0D8F70B /* Stevia+LayoutAnchors.swift */; };
-		1CA066B33FF8B79A48A1496041E9CC6A /* Stevia+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18C3BE655CC2FEF209B295D941BB93DC /* Stevia+Hierarchy.swift */; };
-		22ADF4D3874D01ECFC38400352D24E0D /* Stevia+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2F957CAC1C6BAE4A0CEC4CE551CC2D /* Stevia+Alignment.swift */; };
-		283DD2EE6951EFE6837859B21BB86C76 /* SteviaLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E32665649522EB81BE99CB3A9F78936D /* SteviaLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2E9779421FDEA1173F23AA1008344906 /* Stevia+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2568438B2C41EB59B5BD05D5F28F725D /* Stevia+Style.swift */; };
-		30CD16C63EEB01770256C0158A389B4F /* ParallaxAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FCDA6ED3A8AF18F1801155F661497F /* ParallaxAttributesAnimator.swift */; };
-		34E089C95A52C545730C36ABE5D0A21C /* PageAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17C6FF1F0D7D76EC85BE6E2FE7E48798 /* PageAttributesAnimator.swift */; };
+		081F96F207C6DAE0511F9AC64A8F321B /* Stevia+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A71A234E90EEC5F1DE21ED0A621F3E /* Stevia+Operators.swift */; };
+		0D50D51AEF0C5A08CB8959C56CC685E4 /* Stevia+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E29D97CBC3247806D948EDCD094572 /* Stevia+Stacks.swift */; };
+		0EB09D352AA589FDC8E8A8F315C3AFF2 /* UICollectionView + ViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C76ED5DB8F8237C8B767B8DECAB92D /* UICollectionView + ViewAnimator.swift */; };
+		22071CD45CB084840D62328DC94A08D5 /* ViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD49CFCF0A7BEA435FBB70172D6644D /* ViewAnimator.swift */; };
+		254EA7271C73064BABAB013AF01E145D /* Stevia+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796EFCB983937EF1A0EE43E2E604BFC7 /* Stevia+Style.swift */; };
+		2B7EF86D3648F2D909C7D0293F6CD4EC /* Stevia+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780589369BC011DC4D3DACEB34C18587 /* Stevia+Percentage.swift */; };
+		30CD16C63EEB01770256C0158A389B4F /* ParallaxAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60741F2A631760956AB815FCC6DD69AC /* ParallaxAttributesAnimator.swift */; };
+		34E089C95A52C545730C36ABE5D0A21C /* PageAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28931C9C495EB392A1361695ED3FF1FF /* PageAttributesAnimator.swift */; };
 		3881AC5D2B9728C3A7FBDD95498D7341 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		3B0B21942A7843201C6B1BF67A22AE6E /* Stevia+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A94A5A6045202390945A82F9912540 /* Stevia+Position.swift */; };
-		3B0EDB5021CD41901372BAEB4130D7C7 /* Stevia+FlexibleMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = E93C76D0D3179E6ECAB8EC2387031B35 /* Stevia+FlexibleMargin.swift */; };
-		3B4A76AFE161D8ADFAFC9BCD5483D51D /* CrossFadeAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD45599BD302BE2064FB715C643F92A /* CrossFadeAttributesAnimator.swift */; };
-		41AA1C16C0081466BAA00B11A3FDA59C /* SteviaLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F21312D51002EBA0B53F5F32D3995D59 /* SteviaLayout-dummy.m */; };
-		493B5A4AA8BA5BDE190B4445F1DCE659 /* RotateInOutAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F91969561A8DC67C8440908E4B3665A /* RotateInOutAttributesAnimator.swift */; };
-		4A8828DC406DA0C1A84337C4E3E2D1A7 /* CubeAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACA37B616E6C3092A3A731F653F535E /* CubeAttributesAnimator.swift */; };
-		4BFDC01D9D5476E3BACEAC5684C3F1A5 /* Stevia+GetConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A78F4E06ECDE9975656CB2FBE4683B4 /* Stevia+GetConstraint.swift */; };
-		4C4A48D25DC175B69F7DD843A380C05A /* LayoutAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD6C38E729EAEA4068A10DEBB657F1E6 /* LayoutAttributesAnimator.swift */; };
-		4D703F868D6D6D754868B8E2E358D9CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		53AF7655C96E71D3ABF4DDCE69ABB413 /* Stevia+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6437F803614FE6EED07BFFDD2F7E5B /* Stevia+Percentage.swift */; };
-		619469C14CD2CB9AF0E6FB566CB87263 /* AnimatedCollectionViewLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDCD9673C2797116BC4432FC1E069EAC /* AnimatedCollectionViewLayout-dummy.m */; };
-		646917FC018EE670A03EA32A1D145A38 /* LinearCardAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EC382E928E2F6C7DC40C66AC85161D7 /* LinearCardAttributesAnimator.swift */; };
-		732361107D21D5C9561DF7DDB6497E2A /* ZoomInOutAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E9E7CBD6299EBED0AFB72D1D2165FE /* ZoomInOutAttributesAnimator.swift */; };
-		73E41E68FB3F4165EBF3D5E568665522 /* Stevia+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = 878B11590AC34CDF646061BF821FB9B0 /* Stevia+Center.swift */; };
-		7882AEC0B190D433FAC964BED27A8204 /* Stevia+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42F0B1ACCB98C489D062A6B26E9534 /* Stevia+Operators.swift */; };
-		8986D3F6223713C06CDEF9CF0F88DFE7 /* Pods-StarterApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0743A4FBB6F9711F2D1E79A9B526104A /* Pods-StarterApp-dummy.m */; };
-		96F12FB33BCA2B82BA83CCD899CB865E /* Stevia+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA814BFA5B7EED7838F88916A8D0A081 /* Stevia+Size.swift */; };
-		A5F0B41E4A0E44ADF03317588C791E9B /* Stevia+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26EEFD020FAEC52FF08ECACECB7FCBEC /* Stevia+Constraints.swift */; };
-		B7D9F43DA032B6C4A9BA7C7B7D66C374 /* Stevia+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82A25BDC4C38BCE0B705BDCB5C5C0AFD /* Stevia+Stacks.swift */; };
-		B9B4724B3026208776F6802963896BFD /* AnimatedCollectionViewLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B8BDFE1710A236E860FD213A6A0E33 /* AnimatedCollectionViewLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BA8CEBF6C670D71B6AFC50838C023BF4 /* Stevia+Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7175BCD56CA3E83534900FA81F3EE008 /* Stevia+Equation.swift */; };
-		BBE1FDEE2D4B3E1613BE1C1C09493AEF /* Stevia+Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F22D91DEA17C50ACC4329C6D301F8DF /* Stevia+Fill.swift */; };
-		BF85F5CFB9F70D13B50935006E1FB473 /* Stevia+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C765FFE26DDC729F7DB86F4D198D90E /* Stevia+Content.swift */; };
-		C0257F3E8DFB7D7F455294F6B3398F7C /* AnimatedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF4BD0B30BD8C4A0A300B16F11D8F384 /* AnimatedCollectionViewLayout.swift */; };
-		C71E4DEE99E4A0C3D7448D1F0D4B8E1E /* Stevia+Baselines.swift in Sources */ = {isa = PBXBuildFile; fileRef = F016F954F97DA83DD99C1095604B66E5 /* Stevia+Baselines.swift */; };
-		E1933C4631D23F0DE2F06F8238570FAA /* SnapInAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EC06FBC905083A3DF65B6A5AA402A /* SnapInAttributesAnimator.swift */; };
-		EA8132E0D4DB1A6BFB94ADD0CBE7CE23 /* Stevia+DoubleDash.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB318C8B1F4795BF46265D8059434689 /* Stevia+DoubleDash.swift */; };
-		F23143AC747DE79C15251E8C6ACFDDC9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		FD9BA7D66E91857A3BEAD74431A13E41 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544025F48720ECD57C10140785585CB1 /* UIView+Anchor.swift */; };
-		FEFAC72FB02F6DA90ABC03131234169B /* Stevia+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = F71DC5BEDE55EA8B65A2AAA2E9D58F98 /* Stevia+Notifications.swift */; };
+		3B4A76AFE161D8ADFAFC9BCD5483D51D /* CrossFadeAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C70AE2E1FC5BB720B592C0D75217024 /* CrossFadeAttributesAnimator.swift */; };
+		414A8902C28BD9A5F4A7E112F38520C9 /* Stevia+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69A672479A4290520BEA00317DC6836 /* Stevia+Size.swift */; };
+		41CDF3BA477C0888EC49A66EC2835876 /* Stevia+GetConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FDC5DC5B6049277F164227E5B719C9D /* Stevia+GetConstraint.swift */; };
+		43626642ABF0F9F9C916D28F60960E1E /* Stevia+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4A0B3EB3F44646F34ED2E094ABDCA9 /* Stevia+Position.swift */; };
+		493B5A4AA8BA5BDE190B4445F1DCE659 /* RotateInOutAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91EB0C8E5DA2EC91A854AAA5D5E15CF /* RotateInOutAttributesAnimator.swift */; };
+		4A8828DC406DA0C1A84337C4E3E2D1A7 /* CubeAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D485470D2B8961DF306B7CD7CAC292E1 /* CubeAttributesAnimator.swift */; };
+		4C4A48D25DC175B69F7DD843A380C05A /* LayoutAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A631F608CD11B3519524C7E5FF8F16 /* LayoutAttributesAnimator.swift */; };
+		50B75AF735ABE99E633C90E2C9127484 /* ViewAnimator-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C96E29B2A3308C6809E36FC56D4B3F4 /* ViewAnimator-dummy.m */; };
+		52A8F8FD19E6DA18BA683A0316386C4C /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = D479BD09D070D960C38605A02A1AF5D5 /* Direction.swift */; };
+		5F30A75BEA3CDA3091E99EE16BC2BBD9 /* Pods-StarterApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3407B5E3657B1BFD0E7ECE5554E29C6B /* Pods-StarterApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		619469C14CD2CB9AF0E6FB566CB87263 /* AnimatedCollectionViewLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D1D43F31E5931A0DC4E9E27A3DDC97D /* AnimatedCollectionViewLayout-dummy.m */; };
+		626AAB4C2B4B0108BFCD840B199680BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		646917FC018EE670A03EA32A1D145A38 /* LinearCardAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E42207DF9FCA4D8821E3DC970EA1185 /* LinearCardAttributesAnimator.swift */; };
+		65FE008CC314FD314E4721928AF355DB /* Stevia+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED68DD6EA334BCBA4DF3E4FFD79724DE /* Stevia+Constraints.swift */; };
+		6AE65DA333E98BBE8618B91B448F715D /* SteviaLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC59C54A9F7619C935604361A1C2BB82 /* SteviaLayout-dummy.m */; };
+		732361107D21D5C9561DF7DDB6497E2A /* ZoomInOutAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77BE7453826E27CDD85F5A007DE43880 /* ZoomInOutAttributesAnimator.swift */; };
+		7DC225B12CE3A5B1496AA089E988E7BC /* Stevia+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC092A8E17DDFB12AB89E57998BE5DD5 /* Stevia+Notifications.swift */; };
+		7E0953114BCC9D47A63871F83FE90C47 /* SteviaLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C07C2DBBDAE2958D8950F588FEF47BB /* SteviaLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7EF8AE39D1BA22521D7EE92C765D5B01 /* UITableView + ViewAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C59350F09149C9E59CCF862D6E696707 /* UITableView + ViewAnimator.swift */; };
+		895B2C68ABA64DA92B8E9FF775C59A94 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		89CA86B70F534BECCB9578B7A2CC8405 /* Stevia+Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB28B88F7DCF3E2B15FBBF9BBF5402BC /* Stevia+Equation.swift */; };
+		8CA65DB660E977A01F1F8EAC0345B143 /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D48A9AAFCA675B7F6F538AA55B41EE7 /* AnimationType.swift */; };
+		9A65E8D2FF47C231785C7262AF2BD3EE /* Stevia+Baselines.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5C57C7D77F6894598D1D449AE5F41D /* Stevia+Baselines.swift */; };
+		B56DAAE9D88524D29EABD872AEB6AFA7 /* Pods-StarterApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0743A4FBB6F9711F2D1E79A9B526104A /* Pods-StarterApp-dummy.m */; };
+		B5A34ED094B416A9249C6E2BAB947329 /* Stevia+FlexibleMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81C452A7A32FCD8AA461796933674FE7 /* Stevia+FlexibleMargin.swift */; };
+		B76FC0CEA82055F83486FDF6B5A13E5A /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EC029AFFBAC1E173522972D727BEE3 /* Animation.swift */; };
+		B7CC08F50CFBEDEC7AB411D019FE6B6C /* Stevia+DoubleDash.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF61BE75555BE5973A6F78D8C23E09CD /* Stevia+DoubleDash.swift */; };
+		B97B195E5CA5901D678DA82BB799F327 /* Stevia+LayoutAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52EA966FDF60811AA4E6BA8A015A005F /* Stevia+LayoutAnchors.swift */; };
+		B9B4724B3026208776F6802963896BFD /* AnimatedCollectionViewLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C166BF9F2C0378EC72A0A3A8BD23A269 /* AnimatedCollectionViewLayout-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BCED2EED19B4FE224BBB4F836443350B /* Stevia+Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8DD110C25AFDCCAB79482BC39262E68 /* Stevia+Fill.swift */; };
+		C0257F3E8DFB7D7F455294F6B3398F7C /* AnimatedCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2BFE1F98EE8362639F8334370DE812 /* AnimatedCollectionViewLayout.swift */; };
+		C5464BF2894039BFE4BA0CD202D98578 /* ViewAnimator-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 01F5781A218322B8F76E599007644080 /* ViewAnimator-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2C0F37F4F6604AD9C2B2D244603334B /* Stevia+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82B2D2F6F28BBC8972CA50B36771DC9F /* Stevia+Hierarchy.swift */; };
+		D511329AE059D83D3DCF3D9A85C2570B /* Stevia+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7292F281DE096420E5A2D57C52123D4 /* Stevia+Center.swift */; };
+		D7D30A30721922EB778A4AB452409672 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
+		E1933C4631D23F0DE2F06F8238570FAA /* SnapInAttributesAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77398046085AAA542AF76169FFD76C0B /* SnapInAttributesAnimator.swift */; };
+		EAEB1D4066B02F0D2C3B72FDE51A5AFE /* ViewAnimatorConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = B390A432A01D9F75FAF0DEBD1657B34F /* ViewAnimatorConfig.swift */; };
+		F6526E943E816CDBAEAE4BC94203FF33 /* Stevia+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C030950B0CE7B62071752E78F2766F /* Stevia+Content.swift */; };
+		FB7D508932254DD0A7D86CD9B368851C /* Stevia+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A715EB13712928CC781465B7B9EAFBE /* Stevia+Alignment.swift */; };
+		FD9BA7D66E91857A3BEAD74431A13E41 /* UIView+Anchor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F6A1D94C5B32579EF4C9371088DDDB /* UIView+Anchor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		50F4FA526538A7711F80BCB6B9AFD11B /* PBXContainerItemProxy */ = {
+		0580A0914CB32F7F9C0B0CEDAA3371F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2C71A3197D09F3BC73E5AB70A6610C3E;
+			remoteInfo = SteviaLayout;
+		};
+		AF0D94EEF677D4982051F8F2FA7EC68E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D6B9B85DCB8CB188171BB04F433EA3B4;
 			remoteInfo = AnimatedCollectionViewLayout;
 		};
-		E815FA0BAEDECCAADC9C73F5DCBEFE4A /* PBXContainerItemProxy */ = {
+		C5508EC7DD71379D2697EA2A412D1BEA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F57E1B08C92B3018A8B70C1380A29E2F;
-			remoteInfo = SteviaLayout;
+			remoteGlobalIDString = F362496A171F607DA01C4DC1FEB30A86;
+			remoteInfo = ViewAnimator;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01F5781A218322B8F76E599007644080 /* ViewAnimator-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ViewAnimator-umbrella.h"; sourceTree = "<group>"; };
+		05C030950B0CE7B62071752E78F2766F /* Stevia+Content.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Content.swift"; path = "Source/Stevia+Content.swift"; sourceTree = "<group>"; };
 		0743A4FBB6F9711F2D1E79A9B526104A /* Pods-StarterApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StarterApp-dummy.m"; sourceTree = "<group>"; };
-		0C765FFE26DDC729F7DB86F4D198D90E /* Stevia+Content.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Content.swift"; path = "Source/Stevia+Content.swift"; sourceTree = "<group>"; };
-		11B8BDFE1710A236E860FD213A6A0E33 /* AnimatedCollectionViewLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedCollectionViewLayout-umbrella.h"; sourceTree = "<group>"; };
-		17C6FF1F0D7D76EC85BE6E2FE7E48798 /* PageAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageAttributesAnimator.swift; path = Source/PageAttributesAnimator.swift; sourceTree = "<group>"; };
-		18C3BE655CC2FEF209B295D941BB93DC /* Stevia+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Hierarchy.swift"; path = "Source/Stevia+Hierarchy.swift"; sourceTree = "<group>"; };
+		0D48A9AAFCA675B7F6F538AA55B41EE7 /* AnimationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationType.swift; path = ViewAnimator/Classes/Models/AnimationType.swift; sourceTree = "<group>"; };
+		0DD49CFCF0A7BEA435FBB70172D6644D /* ViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewAnimator.swift; path = ViewAnimator/Classes/ViewAnimator.swift; sourceTree = "<group>"; };
+		18F6A1D94C5B32579EF4C9371088DDDB /* UIView+Anchor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Anchor.swift"; path = "Source/UIView+Anchor.swift"; sourceTree = "<group>"; };
 		1B42BF9A2331A3BEDE942076AC40732A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C70AE2E1FC5BB720B592C0D75217024 /* CrossFadeAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CrossFadeAttributesAnimator.swift; path = Source/CrossFadeAttributesAnimator.swift; sourceTree = "<group>"; };
+		1D1D43F31E5931A0DC4E9E27A3DDC97D /* AnimatedCollectionViewLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AnimatedCollectionViewLayout-dummy.m"; sourceTree = "<group>"; };
 		24390EFD555DD124430DFF9724065945 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		2568438B2C41EB59B5BD05D5F28F725D /* Stevia+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Style.swift"; path = "Source/Stevia+Style.swift"; sourceTree = "<group>"; };
-		26EEFD020FAEC52FF08ECACECB7FCBEC /* Stevia+Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Constraints.swift"; path = "Source/Stevia+Constraints.swift"; sourceTree = "<group>"; };
-		2EC382E928E2F6C7DC40C66AC85161D7 /* LinearCardAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinearCardAttributesAnimator.swift; path = Source/LinearCardAttributesAnimator.swift; sourceTree = "<group>"; };
+		28931C9C495EB392A1361695ED3FF1FF /* PageAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageAttributesAnimator.swift; path = Source/PageAttributesAnimator.swift; sourceTree = "<group>"; };
 		31E2B448EC4BFEC36B6770E7F3B783D1 /* Pods-StarterApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StarterApp.modulemap"; sourceTree = "<group>"; };
+		33CD96DA34C152F06C8F79D03E77C157 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3407B5E3657B1BFD0E7ECE5554E29C6B /* Pods-StarterApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StarterApp-umbrella.h"; sourceTree = "<group>"; };
-		45F78F4B87BB658C9684B331B0D8F70B /* Stevia+LayoutAnchors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+LayoutAnchors.swift"; path = "Source/Stevia+LayoutAnchors.swift"; sourceTree = "<group>"; };
+		35EC029AFFBAC1E173522972D727BEE3 /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = ViewAnimator/Classes/Protocols/Animation.swift; sourceTree = "<group>"; };
+		3C07C2DBBDAE2958D8950F588FEF47BB /* SteviaLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SteviaLayout-umbrella.h"; sourceTree = "<group>"; };
+		40A71A234E90EEC5F1DE21ED0A621F3E /* Stevia+Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Operators.swift"; path = "Source/Stevia+Operators.swift"; sourceTree = "<group>"; };
+		44E29D97CBC3247806D948EDCD094572 /* Stevia+Stacks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Stacks.swift"; path = "Source/Stevia+Stacks.swift"; sourceTree = "<group>"; };
 		47B67A6B1123915D0225189A888C67E1 /* Pods-StarterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarterApp.release.xcconfig"; sourceTree = "<group>"; };
-		4ACA37B616E6C3092A3A731F653F535E /* CubeAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CubeAttributesAnimator.swift; path = Source/CubeAttributesAnimator.swift; sourceTree = "<group>"; };
-		4DBAB431EFB2B5A39E036ED5E737E094 /* Pods_StarterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StarterApp.framework; path = "Pods-StarterApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		51651D2A460099C0939655D08F3DF590 /* AnimatedCollectionViewLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnimatedCollectionViewLayout.xcconfig; sourceTree = "<group>"; };
-		52E9E7CBD6299EBED0AFB72D1D2165FE /* ZoomInOutAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZoomInOutAttributesAnimator.swift; path = Source/ZoomInOutAttributesAnimator.swift; sourceTree = "<group>"; };
-		544025F48720ECD57C10140785585CB1 /* UIView+Anchor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+Anchor.swift"; path = "Source/UIView+Anchor.swift"; sourceTree = "<group>"; };
-		546EC06FBC905083A3DF65B6A5AA402A /* SnapInAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapInAttributesAnimator.swift; path = Source/SnapInAttributesAnimator.swift; sourceTree = "<group>"; };
-		5FD45599BD302BE2064FB715C643F92A /* CrossFadeAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CrossFadeAttributesAnimator.swift; path = Source/CrossFadeAttributesAnimator.swift; sourceTree = "<group>"; };
-		66BFB4C53FC5E70B46B52E9A354EDE70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6A78F4E06ECDE9975656CB2FBE4683B4 /* Stevia+GetConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+GetConstraint.swift"; path = "Source/Stevia+GetConstraint.swift"; sourceTree = "<group>"; };
-		70546107067F39E0259C593310F3427F /* AnimatedCollectionViewLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedCollectionViewLayout-prefix.pch"; sourceTree = "<group>"; };
-		7175BCD56CA3E83534900FA81F3EE008 /* Stevia+Equation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Equation.swift"; path = "Source/Stevia+Equation.swift"; sourceTree = "<group>"; };
-		7F91969561A8DC67C8440908E4B3665A /* RotateInOutAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotateInOutAttributesAnimator.swift; path = Source/RotateInOutAttributesAnimator.swift; sourceTree = "<group>"; };
-		82A25BDC4C38BCE0B705BDCB5C5C0AFD /* Stevia+Stacks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Stacks.swift"; path = "Source/Stevia+Stacks.swift"; sourceTree = "<group>"; };
-		878B11590AC34CDF646061BF821FB9B0 /* Stevia+Center.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Center.swift"; path = "Source/Stevia+Center.swift"; sourceTree = "<group>"; };
+		4E42207DF9FCA4D8821E3DC970EA1185 /* LinearCardAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinearCardAttributesAnimator.swift; path = Source/LinearCardAttributesAnimator.swift; sourceTree = "<group>"; };
+		4E5198C10ECE81F2CDE41766F9F68F65 /* AnimatedCollectionViewLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AnimatedCollectionViewLayout.modulemap; sourceTree = "<group>"; };
+		4FDC5DC5B6049277F164227E5B719C9D /* Stevia+GetConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+GetConstraint.swift"; path = "Source/Stevia+GetConstraint.swift"; sourceTree = "<group>"; };
+		52EA966FDF60811AA4E6BA8A015A005F /* Stevia+LayoutAnchors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+LayoutAnchors.swift"; path = "Source/Stevia+LayoutAnchors.swift"; sourceTree = "<group>"; };
+		5B3D4BA952A6E944DB7A3A4D00806AA4 /* Stevia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Stevia.framework; path = SteviaLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C96E29B2A3308C6809E36FC56D4B3F4 /* ViewAnimator-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ViewAnimator-dummy.m"; sourceTree = "<group>"; };
+		5E7096572494FE8CF77B100469379043 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60741F2A631760956AB815FCC6DD69AC /* ParallaxAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParallaxAttributesAnimator.swift; path = Source/ParallaxAttributesAnimator.swift; sourceTree = "<group>"; };
+		68C76ED5DB8F8237C8B767B8DECAB92D /* UICollectionView + ViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UICollectionView + ViewAnimator.swift"; path = "ViewAnimator/Classes/Extensions/UICollectionView + ViewAnimator.swift"; sourceTree = "<group>"; };
+		691F4D093F40BB0A956662133465A6EB /* ViewAnimator-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ViewAnimator-prefix.pch"; sourceTree = "<group>"; };
+		6D4814498D74941FA7891A5626C3AF81 /* SteviaLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SteviaLayout-prefix.pch"; sourceTree = "<group>"; };
+		71A631F608CD11B3519524C7E5FF8F16 /* LayoutAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutAttributesAnimator.swift; path = Source/LayoutAttributesAnimator.swift; sourceTree = "<group>"; };
+		77398046085AAA542AF76169FFD76C0B /* SnapInAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SnapInAttributesAnimator.swift; path = Source/SnapInAttributesAnimator.swift; sourceTree = "<group>"; };
+		77BE7453826E27CDD85F5A007DE43880 /* ZoomInOutAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZoomInOutAttributesAnimator.swift; path = Source/ZoomInOutAttributesAnimator.swift; sourceTree = "<group>"; };
+		780589369BC011DC4D3DACEB34C18587 /* Stevia+Percentage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Percentage.swift"; path = "Source/Stevia+Percentage.swift"; sourceTree = "<group>"; };
+		796EFCB983937EF1A0EE43E2E604BFC7 /* Stevia+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Style.swift"; path = "Source/Stevia+Style.swift"; sourceTree = "<group>"; };
+		7A0194644219A2744E3673E2D87DBB65 /* ViewAnimator.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ViewAnimator.modulemap; sourceTree = "<group>"; };
+		81C452A7A32FCD8AA461796933674FE7 /* Stevia+FlexibleMargin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+FlexibleMargin.swift"; path = "Source/Stevia+FlexibleMargin.swift"; sourceTree = "<group>"; };
+		82B2D2F6F28BBC8972CA50B36771DC9F /* Stevia+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Hierarchy.swift"; path = "Source/Stevia+Hierarchy.swift"; sourceTree = "<group>"; };
+		8A715EB13712928CC781465B7B9EAFBE /* Stevia+Alignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Alignment.swift"; path = "Source/Stevia+Alignment.swift"; sourceTree = "<group>"; };
+		8DF6430ED5C7CDC673CBA4DB2C6F27BB /* Pods_StarterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_StarterApp.framework; path = "Pods-StarterApp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		91D1AD9A071F08C962606ED3359BCDE8 /* ViewAnimator.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ViewAnimator.xcconfig; sourceTree = "<group>"; };
+		954165C160A9EE57B2A658D6A6CDC6A3 /* AnimatedCollectionViewLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedCollectionViewLayout-prefix.pch"; sourceTree = "<group>"; };
 		9B0FE7CB762E6E7C02688E1BFF6E3430 /* Pods-StarterApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StarterApp-frameworks.sh"; sourceTree = "<group>"; };
-		9F22D91DEA17C50ACC4329C6D301F8DF /* Stevia+Fill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Fill.swift"; path = "Source/Stevia+Fill.swift"; sourceTree = "<group>"; };
 		A0F919170007BBF5823047F47F0EA972 /* Pods-StarterApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-StarterApp-resources.sh"; sourceTree = "<group>"; };
-		A34C2ED400B92CDB4D0F8B8FDF0084A3 /* AnimatedCollectionViewLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AnimatedCollectionViewLayout.framework; path = AnimatedCollectionViewLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A6C06AA6B907ECB0D8DE68C2FA342CD0 /* SteviaLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SteviaLayout.xcconfig; sourceTree = "<group>"; };
 		AC4A1B4F53D67E8567A09C203DD60D1D /* Pods-StarterApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StarterApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		AD2F957CAC1C6BAE4A0CEC4CE551CC2D /* Stevia+Alignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Alignment.swift"; path = "Source/Stevia+Alignment.swift"; sourceTree = "<group>"; };
-		CA814BFA5B7EED7838F88916A8D0A081 /* Stevia+Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Size.swift"; path = "Source/Stevia+Size.swift"; sourceTree = "<group>"; };
+		B390A432A01D9F75FAF0DEBD1657B34F /* ViewAnimatorConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewAnimatorConfig.swift; path = ViewAnimator/Classes/ViewAnimatorConfig.swift; sourceTree = "<group>"; };
+		B69A672479A4290520BEA00317DC6836 /* Stevia+Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Size.swift"; path = "Source/Stevia+Size.swift"; sourceTree = "<group>"; };
+		BD5C57C7D77F6894598D1D449AE5F41D /* Stevia+Baselines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Baselines.swift"; path = "Source/Stevia+Baselines.swift"; sourceTree = "<group>"; };
+		BF61BE75555BE5973A6F78D8C23E09CD /* Stevia+DoubleDash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+DoubleDash.swift"; path = "Source/Stevia+DoubleDash.swift"; sourceTree = "<group>"; };
+		C166BF9F2C0378EC72A0A3A8BD23A269 /* AnimatedCollectionViewLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AnimatedCollectionViewLayout-umbrella.h"; sourceTree = "<group>"; };
+		C343D19721A9302D6F9F8981C0B9755B /* SteviaLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SteviaLayout.xcconfig; sourceTree = "<group>"; };
+		C59350F09149C9E59CCF862D6E696707 /* UITableView + ViewAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITableView + ViewAnimator.swift"; path = "ViewAnimator/Classes/Extensions/UITableView + ViewAnimator.swift"; sourceTree = "<group>"; };
+		C78F3972B3A9DDAC4948CE110BF0FFAA /* ViewAnimator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ViewAnimator.framework; path = ViewAnimator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		CC42F0B1ACCB98C489D062A6B26E9534 /* Stevia+Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Operators.swift"; path = "Source/Stevia+Operators.swift"; sourceTree = "<group>"; };
-		CD1E5E7ECD55DAEA85F2656EF3CDB169 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CFF78FA898DFB2BFFA02B866140933BE /* SteviaLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SteviaLayout-prefix.pch"; sourceTree = "<group>"; };
-		D115C5917733DC56AC294D5E9B60F0A4 /* AnimatedCollectionViewLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AnimatedCollectionViewLayout.modulemap; sourceTree = "<group>"; };
-		E1AA603314CCA97BE142DA7897070619 /* SteviaLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SteviaLayout.modulemap; sourceTree = "<group>"; };
+		D032FC3C1DFC00CC9A125655EAEB7D39 /* AnimatedCollectionViewLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AnimatedCollectionViewLayout.framework; path = AnimatedCollectionViewLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D3E37DD6F60CB15D7E14D02BE3D628B6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D479BD09D070D960C38605A02A1AF5D5 /* Direction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Direction.swift; path = ViewAnimator/Classes/Models/Direction.swift; sourceTree = "<group>"; };
+		D485470D2B8961DF306B7CD7CAC292E1 /* CubeAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CubeAttributesAnimator.swift; path = Source/CubeAttributesAnimator.swift; sourceTree = "<group>"; };
+		D89346C5AEEFA16F76265CB32678B818 /* SteviaLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SteviaLayout.modulemap; sourceTree = "<group>"; };
+		DB28B88F7DCF3E2B15FBBF9BBF5402BC /* Stevia+Equation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Equation.swift"; path = "Source/Stevia+Equation.swift"; sourceTree = "<group>"; };
 		E2B2B12FA2F59732E8F02E2B01BDF43C /* Pods-StarterApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StarterApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E32665649522EB81BE99CB3A9F78936D /* SteviaLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SteviaLayout-umbrella.h"; sourceTree = "<group>"; };
+		E7292F281DE096420E5A2D57C52123D4 /* Stevia+Center.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Center.swift"; path = "Source/Stevia+Center.swift"; sourceTree = "<group>"; };
 		E7A98D8EB9309E4C1FF6E81D9F557256 /* Pods-StarterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StarterApp.debug.xcconfig"; sourceTree = "<group>"; };
-		E93C76D0D3179E6ECAB8EC2387031B35 /* Stevia+FlexibleMargin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+FlexibleMargin.swift"; path = "Source/Stevia+FlexibleMargin.swift"; sourceTree = "<group>"; };
-		EA6437F803614FE6EED07BFFDD2F7E5B /* Stevia+Percentage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Percentage.swift"; path = "Source/Stevia+Percentage.swift"; sourceTree = "<group>"; };
-		EB318C8B1F4795BF46265D8059434689 /* Stevia+DoubleDash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+DoubleDash.swift"; path = "Source/Stevia+DoubleDash.swift"; sourceTree = "<group>"; };
-		EC6B9B328EA37B3AA211F02472B8569D /* Stevia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Stevia.framework; path = SteviaLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF4BD0B30BD8C4A0A300B16F11D8F384 /* AnimatedCollectionViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedCollectionViewLayout.swift; path = Source/AnimatedCollectionViewLayout.swift; sourceTree = "<group>"; };
-		F016F954F97DA83DD99C1095604B66E5 /* Stevia+Baselines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Baselines.swift"; path = "Source/Stevia+Baselines.swift"; sourceTree = "<group>"; };
-		F21312D51002EBA0B53F5F32D3995D59 /* SteviaLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SteviaLayout-dummy.m"; sourceTree = "<group>"; };
-		F71DC5BEDE55EA8B65A2AAA2E9D58F98 /* Stevia+Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Notifications.swift"; path = "Source/Stevia+Notifications.swift"; sourceTree = "<group>"; };
-		F7FCDA6ED3A8AF18F1801155F661497F /* ParallaxAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParallaxAttributesAnimator.swift; path = Source/ParallaxAttributesAnimator.swift; sourceTree = "<group>"; };
-		F8A94A5A6045202390945A82F9912540 /* Stevia+Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Position.swift"; path = "Source/Stevia+Position.swift"; sourceTree = "<group>"; };
-		FD6C38E729EAEA4068A10DEBB657F1E6 /* LayoutAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutAttributesAnimator.swift; path = Source/LayoutAttributesAnimator.swift; sourceTree = "<group>"; };
-		FDCD9673C2797116BC4432FC1E069EAC /* AnimatedCollectionViewLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AnimatedCollectionViewLayout-dummy.m"; sourceTree = "<group>"; };
+		E8DD110C25AFDCCAB79482BC39262E68 /* Stevia+Fill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Fill.swift"; path = "Source/Stevia+Fill.swift"; sourceTree = "<group>"; };
+		E91EB0C8E5DA2EC91A854AAA5D5E15CF /* RotateInOutAttributesAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotateInOutAttributesAnimator.swift; path = Source/RotateInOutAttributesAnimator.swift; sourceTree = "<group>"; };
+		EC092A8E17DDFB12AB89E57998BE5DD5 /* Stevia+Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Notifications.swift"; path = "Source/Stevia+Notifications.swift"; sourceTree = "<group>"; };
+		EC59C54A9F7619C935604361A1C2BB82 /* SteviaLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SteviaLayout-dummy.m"; sourceTree = "<group>"; };
+		ED540AC8BB5AEEB50AF09EFC3E7AEDD5 /* AnimatedCollectionViewLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AnimatedCollectionViewLayout.xcconfig; sourceTree = "<group>"; };
+		ED68DD6EA334BCBA4DF3E4FFD79724DE /* Stevia+Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Constraints.swift"; path = "Source/Stevia+Constraints.swift"; sourceTree = "<group>"; };
+		EE2BFE1F98EE8362639F8334370DE812 /* AnimatedCollectionViewLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedCollectionViewLayout.swift; path = Source/AnimatedCollectionViewLayout.swift; sourceTree = "<group>"; };
+		FB4A0B3EB3F44646F34ED2E094ABDCA9 /* Stevia+Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Position.swift"; path = "Source/Stevia+Position.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,53 +165,120 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6518F6D0B97A6C02B4831EEC8DCBE405 /* Frameworks */ = {
+		371FA65A499BD295F546474044668BFE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D703F868D6D6D754868B8E2E358D9CC /* Foundation.framework in Frameworks */,
+				D7D30A30721922EB778A4AB452409672 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9B6A3D917E5DCFEF0967D7A37F829D49 /* Frameworks */ = {
+		532479AB45FA00B255DEA10EF80630F0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F23143AC747DE79C15251E8C6ACFDDC9 /* Foundation.framework in Frameworks */,
+				895B2C68ABA64DA92B8E9FF775C59A94 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF4A5B17259FBDF08D3D4050D63A62DD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				626AAB4C2B4B0108BFCD840B199680BD /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1B0AB723E8381A7FB4668232A42AF676 /* Products */ = {
+		064292BFBB225B827CDFD1280CA056DE /* ViewAnimator */ = {
 			isa = PBXGroup;
 			children = (
-				A34C2ED400B92CDB4D0F8B8FDF0084A3 /* AnimatedCollectionViewLayout.framework */,
-				4DBAB431EFB2B5A39E036ED5E737E094 /* Pods_StarterApp.framework */,
-				EC6B9B328EA37B3AA211F02472B8569D /* Stevia.framework */,
+				35EC029AFFBAC1E173522972D727BEE3 /* Animation.swift */,
+				0D48A9AAFCA675B7F6F538AA55B41EE7 /* AnimationType.swift */,
+				D479BD09D070D960C38605A02A1AF5D5 /* Direction.swift */,
+				68C76ED5DB8F8237C8B767B8DECAB92D /* UICollectionView + ViewAnimator.swift */,
+				C59350F09149C9E59CCF862D6E696707 /* UITableView + ViewAnimator.swift */,
+				0DD49CFCF0A7BEA435FBB70172D6644D /* ViewAnimator.swift */,
+				B390A432A01D9F75FAF0DEBD1657B34F /* ViewAnimatorConfig.swift */,
+				2DA7442B87A8FE0791B299673DF97972 /* Support Files */,
+			);
+			name = ViewAnimator;
+			path = ViewAnimator;
+			sourceTree = "<group>";
+		};
+		2DA7442B87A8FE0791B299673DF97972 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				33CD96DA34C152F06C8F79D03E77C157 /* Info.plist */,
+				7A0194644219A2744E3673E2D87DBB65 /* ViewAnimator.modulemap */,
+				91D1AD9A071F08C962606ED3359BCDE8 /* ViewAnimator.xcconfig */,
+				5C96E29B2A3308C6809E36FC56D4B3F4 /* ViewAnimator-dummy.m */,
+				691F4D093F40BB0A956662133465A6EB /* ViewAnimator-prefix.pch */,
+				01F5781A218322B8F76E599007644080 /* ViewAnimator-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ViewAnimator";
+			sourceTree = "<group>";
+		};
+		2EFC668B93A89CA8FBAE9070CAA9240E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E5198C10ECE81F2CDE41766F9F68F65 /* AnimatedCollectionViewLayout.modulemap */,
+				ED540AC8BB5AEEB50AF09EFC3E7AEDD5 /* AnimatedCollectionViewLayout.xcconfig */,
+				1D1D43F31E5931A0DC4E9E27A3DDC97D /* AnimatedCollectionViewLayout-dummy.m */,
+				954165C160A9EE57B2A658D6A6CDC6A3 /* AnimatedCollectionViewLayout-prefix.pch */,
+				C166BF9F2C0378EC72A0A3A8BD23A269 /* AnimatedCollectionViewLayout-umbrella.h */,
+				5E7096572494FE8CF77B100469379043 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AnimatedCollectionViewLayout";
+			sourceTree = "<group>";
+		};
+		3375FE95A537B2B0084DA3D68C6DCF4D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D032FC3C1DFC00CC9A125655EAEB7D39 /* AnimatedCollectionViewLayout.framework */,
+				8DF6430ED5C7CDC673CBA4DB2C6F27BB /* Pods_StarterApp.framework */,
+				5B3D4BA952A6E944DB7A3A4D00806AA4 /* Stevia.framework */,
+				C78F3972B3A9DDAC4948CE110BF0FFAA /* ViewAnimator.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2E1B4629F1BA88B124640D83766C0664 /* AnimatedCollectionViewLayout */ = {
+		3B02BFC0ECD7A6AD619A9E9F7A95C9CF /* AnimatedCollectionViewLayout */ = {
 			isa = PBXGroup;
 			children = (
-				EF4BD0B30BD8C4A0A300B16F11D8F384 /* AnimatedCollectionViewLayout.swift */,
-				5FD45599BD302BE2064FB715C643F92A /* CrossFadeAttributesAnimator.swift */,
-				4ACA37B616E6C3092A3A731F653F535E /* CubeAttributesAnimator.swift */,
-				FD6C38E729EAEA4068A10DEBB657F1E6 /* LayoutAttributesAnimator.swift */,
-				2EC382E928E2F6C7DC40C66AC85161D7 /* LinearCardAttributesAnimator.swift */,
-				17C6FF1F0D7D76EC85BE6E2FE7E48798 /* PageAttributesAnimator.swift */,
-				F7FCDA6ED3A8AF18F1801155F661497F /* ParallaxAttributesAnimator.swift */,
-				7F91969561A8DC67C8440908E4B3665A /* RotateInOutAttributesAnimator.swift */,
-				546EC06FBC905083A3DF65B6A5AA402A /* SnapInAttributesAnimator.swift */,
-				544025F48720ECD57C10140785585CB1 /* UIView+Anchor.swift */,
-				52E9E7CBD6299EBED0AFB72D1D2165FE /* ZoomInOutAttributesAnimator.swift */,
-				9CE15D6CC5CF864BF2D119A97B87371E /* Support Files */,
+				EE2BFE1F98EE8362639F8334370DE812 /* AnimatedCollectionViewLayout.swift */,
+				1C70AE2E1FC5BB720B592C0D75217024 /* CrossFadeAttributesAnimator.swift */,
+				D485470D2B8961DF306B7CD7CAC292E1 /* CubeAttributesAnimator.swift */,
+				71A631F608CD11B3519524C7E5FF8F16 /* LayoutAttributesAnimator.swift */,
+				4E42207DF9FCA4D8821E3DC970EA1185 /* LinearCardAttributesAnimator.swift */,
+				28931C9C495EB392A1361695ED3FF1FF /* PageAttributesAnimator.swift */,
+				60741F2A631760956AB815FCC6DD69AC /* ParallaxAttributesAnimator.swift */,
+				E91EB0C8E5DA2EC91A854AAA5D5E15CF /* RotateInOutAttributesAnimator.swift */,
+				77398046085AAA542AF76169FFD76C0B /* SnapInAttributesAnimator.swift */,
+				18F6A1D94C5B32579EF4C9371088DDDB /* UIView+Anchor.swift */,
+				77BE7453826E27CDD85F5A007DE43880 /* ZoomInOutAttributesAnimator.swift */,
+				2EFC668B93A89CA8FBAE9070CAA9240E /* Support Files */,
 			);
 			name = AnimatedCollectionViewLayout;
 			path = AnimatedCollectionViewLayout;
+			sourceTree = "<group>";
+		};
+		48609FE2A8DE16152A23AB7912889810 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D3E37DD6F60CB15D7E14D02BE3D628B6 /* Info.plist */,
+				D89346C5AEEFA16F76265CB32678B818 /* SteviaLayout.modulemap */,
+				C343D19721A9302D6F9F8981C0B9755B /* SteviaLayout.xcconfig */,
+				EC59C54A9F7619C935604361A1C2BB82 /* SteviaLayout-dummy.m */,
+				6D4814498D74941FA7891A5626C3AF81 /* SteviaLayout-prefix.pch */,
+				3C07C2DBBDAE2958D8950F588FEF47BB /* SteviaLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SteviaLayout";
 			sourceTree = "<group>";
 		};
 		5C7A9489EC08F065AB614EA2FDD0785C /* Pods-StarterApp */ = {
@@ -201,32 +299,14 @@
 			path = "Target Support Files/Pods-StarterApp";
 			sourceTree = "<group>";
 		};
-		6C7D6A0B7AD2E680EBBE80ECE0B01221 /* SteviaLayout */ = {
+		644F2A41D1D1147FA505A155B4325077 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AD2F957CAC1C6BAE4A0CEC4CE551CC2D /* Stevia+Alignment.swift */,
-				F016F954F97DA83DD99C1095604B66E5 /* Stevia+Baselines.swift */,
-				878B11590AC34CDF646061BF821FB9B0 /* Stevia+Center.swift */,
-				26EEFD020FAEC52FF08ECACECB7FCBEC /* Stevia+Constraints.swift */,
-				0C765FFE26DDC729F7DB86F4D198D90E /* Stevia+Content.swift */,
-				EB318C8B1F4795BF46265D8059434689 /* Stevia+DoubleDash.swift */,
-				7175BCD56CA3E83534900FA81F3EE008 /* Stevia+Equation.swift */,
-				9F22D91DEA17C50ACC4329C6D301F8DF /* Stevia+Fill.swift */,
-				E93C76D0D3179E6ECAB8EC2387031B35 /* Stevia+FlexibleMargin.swift */,
-				6A78F4E06ECDE9975656CB2FBE4683B4 /* Stevia+GetConstraint.swift */,
-				18C3BE655CC2FEF209B295D941BB93DC /* Stevia+Hierarchy.swift */,
-				45F78F4B87BB658C9684B331B0D8F70B /* Stevia+LayoutAnchors.swift */,
-				F71DC5BEDE55EA8B65A2AAA2E9D58F98 /* Stevia+Notifications.swift */,
-				CC42F0B1ACCB98C489D062A6B26E9534 /* Stevia+Operators.swift */,
-				EA6437F803614FE6EED07BFFDD2F7E5B /* Stevia+Percentage.swift */,
-				F8A94A5A6045202390945A82F9912540 /* Stevia+Position.swift */,
-				CA814BFA5B7EED7838F88916A8D0A081 /* Stevia+Size.swift */,
-				82A25BDC4C38BCE0B705BDCB5C5C0AFD /* Stevia+Stacks.swift */,
-				2568438B2C41EB59B5BD05D5F28F725D /* Stevia+Style.swift */,
-				EC02EE09FD82F1AB801A6BBFD13D6A7C /* Support Files */,
+				3B02BFC0ECD7A6AD619A9E9F7A95C9CF /* AnimatedCollectionViewLayout */,
+				7DAF8A437A75EF42B9C84EEF9FE29936 /* SteviaLayout */,
+				064292BFBB225B827CDFD1280CA056DE /* ViewAnimator */,
 			);
-			name = SteviaLayout;
-			path = SteviaLayout;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		721AB52587AC4DDFA07743C292D6CEB8 /* Targets Support Files */ = {
@@ -237,6 +317,34 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		7DAF8A437A75EF42B9C84EEF9FE29936 /* SteviaLayout */ = {
+			isa = PBXGroup;
+			children = (
+				8A715EB13712928CC781465B7B9EAFBE /* Stevia+Alignment.swift */,
+				BD5C57C7D77F6894598D1D449AE5F41D /* Stevia+Baselines.swift */,
+				E7292F281DE096420E5A2D57C52123D4 /* Stevia+Center.swift */,
+				ED68DD6EA334BCBA4DF3E4FFD79724DE /* Stevia+Constraints.swift */,
+				05C030950B0CE7B62071752E78F2766F /* Stevia+Content.swift */,
+				BF61BE75555BE5973A6F78D8C23E09CD /* Stevia+DoubleDash.swift */,
+				DB28B88F7DCF3E2B15FBBF9BBF5402BC /* Stevia+Equation.swift */,
+				E8DD110C25AFDCCAB79482BC39262E68 /* Stevia+Fill.swift */,
+				81C452A7A32FCD8AA461796933674FE7 /* Stevia+FlexibleMargin.swift */,
+				4FDC5DC5B6049277F164227E5B719C9D /* Stevia+GetConstraint.swift */,
+				82B2D2F6F28BBC8972CA50B36771DC9F /* Stevia+Hierarchy.swift */,
+				52EA966FDF60811AA4E6BA8A015A005F /* Stevia+LayoutAnchors.swift */,
+				EC092A8E17DDFB12AB89E57998BE5DD5 /* Stevia+Notifications.swift */,
+				40A71A234E90EEC5F1DE21ED0A621F3E /* Stevia+Operators.swift */,
+				780589369BC011DC4D3DACEB34C18587 /* Stevia+Percentage.swift */,
+				FB4A0B3EB3F44646F34ED2E094ABDCA9 /* Stevia+Position.swift */,
+				B69A672479A4290520BEA00317DC6836 /* Stevia+Size.swift */,
+				44E29D97CBC3247806D948EDCD094572 /* Stevia+Stacks.swift */,
+				796EFCB983937EF1A0EE43E2E604BFC7 /* Stevia+Style.swift */,
+				48609FE2A8DE16152A23AB7912889810 /* Support Files */,
+			);
+			name = SteviaLayout;
+			path = SteviaLayout;
+			sourceTree = "<group>";
+		};
 		9B055D0CFEA43187E72B03DED11F5662 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,36 +353,13 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		9CE15D6CC5CF864BF2D119A97B87371E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D115C5917733DC56AC294D5E9B60F0A4 /* AnimatedCollectionViewLayout.modulemap */,
-				51651D2A460099C0939655D08F3DF590 /* AnimatedCollectionViewLayout.xcconfig */,
-				FDCD9673C2797116BC4432FC1E069EAC /* AnimatedCollectionViewLayout-dummy.m */,
-				70546107067F39E0259C593310F3427F /* AnimatedCollectionViewLayout-prefix.pch */,
-				11B8BDFE1710A236E860FD213A6A0E33 /* AnimatedCollectionViewLayout-umbrella.h */,
-				CD1E5E7ECD55DAEA85F2656EF3CDB169 /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/AnimatedCollectionViewLayout";
-			sourceTree = "<group>";
-		};
-		9ECC8E249F6C87BBC8A0D96E643C9DAD /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2E1B4629F1BA88B124640D83766C0664 /* AnimatedCollectionViewLayout */,
-				6C7D6A0B7AD2E680EBBE80ECE0B01221 /* SteviaLayout */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				24390EFD555DD124430DFF9724065945 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				9ECC8E249F6C87BBC8A0D96E643C9DAD /* Pods */,
-				1B0AB723E8381A7FB4668232A42AF676 /* Products */,
+				644F2A41D1D1147FA505A155B4325077 /* Pods */,
+				3375FE95A537B2B0084DA3D68C6DCF4D /* Products */,
 				721AB52587AC4DDFA07743C292D6CEB8 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -287,31 +372,9 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EC02EE09FD82F1AB801A6BBFD13D6A7C /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				66BFB4C53FC5E70B46B52E9A354EDE70 /* Info.plist */,
-				E1AA603314CCA97BE142DA7897070619 /* SteviaLayout.modulemap */,
-				A6C06AA6B907ECB0D8DE68C2FA342CD0 /* SteviaLayout.xcconfig */,
-				F21312D51002EBA0B53F5F32D3995D59 /* SteviaLayout-dummy.m */,
-				CFF78FA898DFB2BFFA02B866140933BE /* SteviaLayout-prefix.pch */,
-				E32665649522EB81BE99CB3A9F78936D /* SteviaLayout-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SteviaLayout";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0605473AB2259C84CF4840850FC3F3D6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				03C463CFAFA72ADEFBD0079847FC6BC2 /* Pods-StarterApp-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		09894D4FE127CCFD6E0D3124B7F575D6 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -320,35 +383,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		439BBBA865C7DA4C1DF51D4DADA225AD /* Headers */ = {
+		0A6B2FC6514312A6FCAC3E4F0AF85A1D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				283DD2EE6951EFE6837859B21BB86C76 /* SteviaLayout-umbrella.h in Headers */,
+				C5464BF2894039BFE4BA0CD202D98578 /* ViewAnimator-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B8FED4FC578004E173B23471DC6F355 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F30A75BEA3CDA3091E99EE16BC2BBD9 /* Pods-StarterApp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D138C69252CE87B16C90B81736AAD9ED /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E0953114BCC9D47A63871F83FE90C47 /* SteviaLayout-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		031C1434237E94FDCED4D85DB306F71D /* Pods-StarterApp */ = {
+		2C71A3197D09F3BC73E5AB70A6610C3E /* SteviaLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5C5323678211A44BBCA89FFF71669564 /* Build configuration list for PBXNativeTarget "Pods-StarterApp" */;
+			buildConfigurationList = B485DC759D64BABBF2BC349B40D7D84E /* Build configuration list for PBXNativeTarget "SteviaLayout" */;
 			buildPhases = (
-				0605473AB2259C84CF4840850FC3F3D6 /* Headers */,
-				08EF1845F7FD8A9E0BD9667865953B8B /* Sources */,
-				9B6A3D917E5DCFEF0967D7A37F829D49 /* Frameworks */,
-				1BB2D7A113275181F3935149C5B67FF7 /* Resources */,
+				D138C69252CE87B16C90B81736AAD9ED /* Headers */,
+				CDB854E23D3A08C04A00331C7667C01A /* Sources */,
+				CF4A5B17259FBDF08D3D4050D63A62DD /* Frameworks */,
+				2129E695A4984F44080D3DD384D19930 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D19DB961FD0F8EDED160E1EB3B5D2BA4 /* PBXTargetDependency */,
-				E187F481DA70AEAF899F84AA51E1AAE8 /* PBXTargetDependency */,
+			);
+			name = SteviaLayout;
+			productName = SteviaLayout;
+			productReference = 5B3D4BA952A6E944DB7A3A4D00806AA4 /* Stevia.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9A1AD7BA3378E699762F72BCF8728933 /* Pods-StarterApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2937AEC07CFC9ABA14E7712F4B7552E /* Build configuration list for PBXNativeTarget "Pods-StarterApp" */;
+			buildPhases = (
+				4B8FED4FC578004E173B23471DC6F355 /* Headers */,
+				7BA932BCC5E26A85ADBF1362E01CDF09 /* Sources */,
+				371FA65A499BD295F546474044668BFE /* Frameworks */,
+				56D20AC147F46C0A1947B1FAA8B31B80 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07943C59117BBCF51AAA0BEA5797B151 /* PBXTargetDependency */,
+				F12B59D40809F9532F817EFBD26DCCAB /* PBXTargetDependency */,
+				E553029E841C7D4F750BB0C75CCAED17 /* PBXTargetDependency */,
 			);
 			name = "Pods-StarterApp";
 			productName = "Pods-StarterApp";
-			productReference = 4DBAB431EFB2B5A39E036ED5E737E094 /* Pods_StarterApp.framework */;
+			productReference = 8DF6430ED5C7CDC673CBA4DB2C6F27BB /* Pods_StarterApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		D6B9B85DCB8CB188171BB04F433EA3B4 /* AnimatedCollectionViewLayout */ = {
@@ -366,25 +464,25 @@
 			);
 			name = AnimatedCollectionViewLayout;
 			productName = AnimatedCollectionViewLayout;
-			productReference = A34C2ED400B92CDB4D0F8B8FDF0084A3 /* AnimatedCollectionViewLayout.framework */;
+			productReference = D032FC3C1DFC00CC9A125655EAEB7D39 /* AnimatedCollectionViewLayout.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F57E1B08C92B3018A8B70C1380A29E2F /* SteviaLayout */ = {
+		F362496A171F607DA01C4DC1FEB30A86 /* ViewAnimator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA5D48D1766DF7737F3B5695A67C564A /* Build configuration list for PBXNativeTarget "SteviaLayout" */;
+			buildConfigurationList = CAD3E1A0319AC6083343496D05194CE6 /* Build configuration list for PBXNativeTarget "ViewAnimator" */;
 			buildPhases = (
-				439BBBA865C7DA4C1DF51D4DADA225AD /* Headers */,
-				22232C8D6065824CBE3A9CA797BE666A /* Sources */,
-				6518F6D0B97A6C02B4831EEC8DCBE405 /* Frameworks */,
-				1DC7CEDBCA50D73F86D3F83028CC22B4 /* Resources */,
+				0A6B2FC6514312A6FCAC3E4F0AF85A1D /* Headers */,
+				9DD51340A4F82860A4EEC8822B74C939 /* Sources */,
+				532479AB45FA00B255DEA10EF80630F0 /* Frameworks */,
+				FA2B5D99984CE50636B772E10A3689A5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = SteviaLayout;
-			productName = SteviaLayout;
-			productReference = EC6B9B328EA37B3AA211F02472B8569D /* Stevia.framework */;
+			name = ViewAnimator;
+			productName = ViewAnimator;
+			productReference = C78F3972B3A9DDAC4948CE110BF0FFAA /* ViewAnimator.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -404,26 +502,27 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 1B0AB723E8381A7FB4668232A42AF676 /* Products */;
+			productRefGroup = 3375FE95A537B2B0084DA3D68C6DCF4D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D6B9B85DCB8CB188171BB04F433EA3B4 /* AnimatedCollectionViewLayout */,
-				031C1434237E94FDCED4D85DB306F71D /* Pods-StarterApp */,
-				F57E1B08C92B3018A8B70C1380A29E2F /* SteviaLayout */,
+				9A1AD7BA3378E699762F72BCF8728933 /* Pods-StarterApp */,
+				2C71A3197D09F3BC73E5AB70A6610C3E /* SteviaLayout */,
+				F362496A171F607DA01C4DC1FEB30A86 /* ViewAnimator */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		1BB2D7A113275181F3935149C5B67FF7 /* Resources */ = {
+		2129E695A4984F44080D3DD384D19930 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1DC7CEDBCA50D73F86D3F83028CC22B4 /* Resources */ = {
+		56D20AC147F46C0A1947B1FAA8B31B80 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -437,44 +536,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA2B5D99984CE50636B772E10A3689A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		08EF1845F7FD8A9E0BD9667865953B8B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8986D3F6223713C06CDEF9CF0F88DFE7 /* Pods-StarterApp-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22232C8D6065824CBE3A9CA797BE666A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				22ADF4D3874D01ECFC38400352D24E0D /* Stevia+Alignment.swift in Sources */,
-				C71E4DEE99E4A0C3D7448D1F0D4B8E1E /* Stevia+Baselines.swift in Sources */,
-				73E41E68FB3F4165EBF3D5E568665522 /* Stevia+Center.swift in Sources */,
-				A5F0B41E4A0E44ADF03317588C791E9B /* Stevia+Constraints.swift in Sources */,
-				BF85F5CFB9F70D13B50935006E1FB473 /* Stevia+Content.swift in Sources */,
-				EA8132E0D4DB1A6BFB94ADD0CBE7CE23 /* Stevia+DoubleDash.swift in Sources */,
-				BA8CEBF6C670D71B6AFC50838C023BF4 /* Stevia+Equation.swift in Sources */,
-				BBE1FDEE2D4B3E1613BE1C1C09493AEF /* Stevia+Fill.swift in Sources */,
-				3B0EDB5021CD41901372BAEB4130D7C7 /* Stevia+FlexibleMargin.swift in Sources */,
-				4BFDC01D9D5476E3BACEAC5684C3F1A5 /* Stevia+GetConstraint.swift in Sources */,
-				1CA066B33FF8B79A48A1496041E9CC6A /* Stevia+Hierarchy.swift in Sources */,
-				10C577FED05A212F1CD7D4D59E08F7B0 /* Stevia+LayoutAnchors.swift in Sources */,
-				FEFAC72FB02F6DA90ABC03131234169B /* Stevia+Notifications.swift in Sources */,
-				7882AEC0B190D433FAC964BED27A8204 /* Stevia+Operators.swift in Sources */,
-				53AF7655C96E71D3ABF4DDCE69ABB413 /* Stevia+Percentage.swift in Sources */,
-				3B0B21942A7843201C6B1BF67A22AE6E /* Stevia+Position.swift in Sources */,
-				96F12FB33BCA2B82BA83CCD899CB865E /* Stevia+Size.swift in Sources */,
-				B7D9F43DA032B6C4A9BA7C7B7D66C374 /* Stevia+Stacks.swift in Sources */,
-				2E9779421FDEA1173F23AA1008344906 /* Stevia+Style.swift in Sources */,
-				41AA1C16C0081466BAA00B11A3FDA59C /* SteviaLayout-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		521C6BA081D366A3DCC47E9825BDC8AF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -494,27 +565,83 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7BA932BCC5E26A85ADBF1362E01CDF09 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B56DAAE9D88524D29EABD872AEB6AFA7 /* Pods-StarterApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9DD51340A4F82860A4EEC8822B74C939 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B76FC0CEA82055F83486FDF6B5A13E5A /* Animation.swift in Sources */,
+				8CA65DB660E977A01F1F8EAC0345B143 /* AnimationType.swift in Sources */,
+				52A8F8FD19E6DA18BA683A0316386C4C /* Direction.swift in Sources */,
+				0EB09D352AA589FDC8E8A8F315C3AFF2 /* UICollectionView + ViewAnimator.swift in Sources */,
+				7EF8AE39D1BA22521D7EE92C765D5B01 /* UITableView + ViewAnimator.swift in Sources */,
+				50B75AF735ABE99E633C90E2C9127484 /* ViewAnimator-dummy.m in Sources */,
+				22071CD45CB084840D62328DC94A08D5 /* ViewAnimator.swift in Sources */,
+				EAEB1D4066B02F0D2C3B72FDE51A5AFE /* ViewAnimatorConfig.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDB854E23D3A08C04A00331C7667C01A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB7D508932254DD0A7D86CD9B368851C /* Stevia+Alignment.swift in Sources */,
+				9A65E8D2FF47C231785C7262AF2BD3EE /* Stevia+Baselines.swift in Sources */,
+				D511329AE059D83D3DCF3D9A85C2570B /* Stevia+Center.swift in Sources */,
+				65FE008CC314FD314E4721928AF355DB /* Stevia+Constraints.swift in Sources */,
+				F6526E943E816CDBAEAE4BC94203FF33 /* Stevia+Content.swift in Sources */,
+				B7CC08F50CFBEDEC7AB411D019FE6B6C /* Stevia+DoubleDash.swift in Sources */,
+				89CA86B70F534BECCB9578B7A2CC8405 /* Stevia+Equation.swift in Sources */,
+				BCED2EED19B4FE224BBB4F836443350B /* Stevia+Fill.swift in Sources */,
+				B5A34ED094B416A9249C6E2BAB947329 /* Stevia+FlexibleMargin.swift in Sources */,
+				41CDF3BA477C0888EC49A66EC2835876 /* Stevia+GetConstraint.swift in Sources */,
+				D2C0F37F4F6604AD9C2B2D244603334B /* Stevia+Hierarchy.swift in Sources */,
+				B97B195E5CA5901D678DA82BB799F327 /* Stevia+LayoutAnchors.swift in Sources */,
+				7DC225B12CE3A5B1496AA089E988E7BC /* Stevia+Notifications.swift in Sources */,
+				081F96F207C6DAE0511F9AC64A8F321B /* Stevia+Operators.swift in Sources */,
+				2B7EF86D3648F2D909C7D0293F6CD4EC /* Stevia+Percentage.swift in Sources */,
+				43626642ABF0F9F9C916D28F60960E1E /* Stevia+Position.swift in Sources */,
+				414A8902C28BD9A5F4A7E112F38520C9 /* Stevia+Size.swift in Sources */,
+				0D50D51AEF0C5A08CB8959C56CC685E4 /* Stevia+Stacks.swift in Sources */,
+				254EA7271C73064BABAB013AF01E145D /* Stevia+Style.swift in Sources */,
+				6AE65DA333E98BBE8618B91B448F715D /* SteviaLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D19DB961FD0F8EDED160E1EB3B5D2BA4 /* PBXTargetDependency */ = {
+		07943C59117BBCF51AAA0BEA5797B151 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AnimatedCollectionViewLayout;
 			target = D6B9B85DCB8CB188171BB04F433EA3B4 /* AnimatedCollectionViewLayout */;
-			targetProxy = 50F4FA526538A7711F80BCB6B9AFD11B /* PBXContainerItemProxy */;
+			targetProxy = AF0D94EEF677D4982051F8F2FA7EC68E /* PBXContainerItemProxy */;
 		};
-		E187F481DA70AEAF899F84AA51E1AAE8 /* PBXTargetDependency */ = {
+		E553029E841C7D4F750BB0C75CCAED17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ViewAnimator;
+			target = F362496A171F607DA01C4DC1FEB30A86 /* ViewAnimator */;
+			targetProxy = C5508EC7DD71379D2697EA2A412D1BEA /* PBXContainerItemProxy */;
+		};
+		F12B59D40809F9532F817EFBD26DCCAB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SteviaLayout;
-			target = F57E1B08C92B3018A8B70C1380A29E2F /* SteviaLayout */;
-			targetProxy = E815FA0BAEDECCAADC9C73F5DCBEFE4A /* PBXContainerItemProxy */;
+			target = 2C71A3197D09F3BC73E5AB70A6610C3E /* SteviaLayout */;
+			targetProxy = 0580A0914CB32F7F9C0B0CEDAA3371F2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		0C9DE543D59D0CC04DAF836E2D2618A4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51651D2A460099C0939655D08F3DF590 /* AnimatedCollectionViewLayout.xcconfig */;
+			baseConfigurationReference = ED540AC8BB5AEEB50AF09EFC3E7AEDD5 /* AnimatedCollectionViewLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -548,86 +675,9 @@
 			};
 			name = Release;
 		};
-		2EAF13FF50795A40E4E7A7590E57BBBE /* Debug */ = {
+		45064C2FBB886D649A2A6B960EDF234A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E7A98D8EB9309E4C1FF6E81D9F557256 /* Pods-StarterApp.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-StarterApp/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-StarterApp/Pods-StarterApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3F0014691164896B4E789164F48331A6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47B67A6B1123915D0225189A888C67E1 /* Pods-StarterApp.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-StarterApp/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-StarterApp/Pods-StarterApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		636FE80391077C12474DD161AE6242CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6C06AA6B907ECB0D8DE68C2FA342CD0 /* SteviaLayout.xcconfig */;
+			baseConfigurationReference = 91D1AD9A071F08C962606ED3359BCDE8 /* ViewAnimator.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -638,8 +688,8 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SteviaLayout/SteviaLayout-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SteviaLayout/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/ViewAnimator/ViewAnimator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ViewAnimator/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -647,9 +697,9 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/SteviaLayout/SteviaLayout.modulemap";
-				PRODUCT_MODULE_NAME = Stevia;
-				PRODUCT_NAME = Stevia;
+				MODULEMAP_FILE = "Target Support Files/ViewAnimator/ViewAnimator.modulemap";
+				PRODUCT_MODULE_NAME = ViewAnimator;
+				PRODUCT_NAME = ViewAnimator;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -727,9 +777,154 @@
 			};
 			name = Debug;
 		};
+		7A09051095AB3D73C541CEA7EC061045 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C343D19721A9302D6F9F8981C0B9755B /* SteviaLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SteviaLayout/SteviaLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SteviaLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SteviaLayout/SteviaLayout.modulemap";
+				PRODUCT_MODULE_NAME = Stevia;
+				PRODUCT_NAME = Stevia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9C5161F480C85A2CF1212CCB38D4CC29 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47B67A6B1123915D0225189A888C67E1 /* Pods-StarterApp.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-StarterApp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StarterApp/Pods-StarterApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AFD35FAEFC804BA02B34A7F03AE72031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91D1AD9A071F08C962606ED3359BCDE8 /* ViewAnimator.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ViewAnimator/ViewAnimator-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ViewAnimator/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ViewAnimator/ViewAnimator.modulemap";
+				PRODUCT_MODULE_NAME = ViewAnimator;
+				PRODUCT_NAME = ViewAnimator;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B7C319C6F37EE5D13333DED50DA5B18C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C343D19721A9302D6F9F8981C0B9755B /* SteviaLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SteviaLayout/SteviaLayout-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SteviaLayout/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SteviaLayout/SteviaLayout.modulemap";
+				PRODUCT_MODULE_NAME = Stevia;
+				PRODUCT_NAME = Stevia;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		B7E208775B26FF6543968461ABA06097 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51651D2A460099C0939655D08F3DF590 /* AnimatedCollectionViewLayout.xcconfig */;
+			baseConfigurationReference = ED540AC8BB5AEEB50AF09EFC3E7AEDD5 /* AnimatedCollectionViewLayout.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -762,10 +957,12 @@
 			};
 			name = Debug;
 		};
-		D93CA80B37313BC0C4772888E57BDBDC /* Debug */ = {
+		C7A314B197136EA3675DFC68758BDA61 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6C06AA6B907ECB0D8DE68C2FA342CD0 /* SteviaLayout.xcconfig */;
+			baseConfigurationReference = E7A98D8EB9309E4C1FF6E81D9F557256 /* Pods-StarterApp.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -775,22 +972,23 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SteviaLayout/SteviaLayout-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SteviaLayout/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-StarterApp/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/SteviaLayout/SteviaLayout.modulemap";
-				PRODUCT_MODULE_NAME = Stevia;
-				PRODUCT_NAME = Stevia;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StarterApp/Pods-StarterApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -871,15 +1069,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5C5323678211A44BBCA89FFF71669564 /* Build configuration list for PBXNativeTarget "Pods-StarterApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2EAF13FF50795A40E4E7A7590E57BBBE /* Debug */,
-				3F0014691164896B4E789164F48331A6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		968CE8E101C0EE1F53161389C92C70F3 /* Build configuration list for PBXNativeTarget "AnimatedCollectionViewLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -889,11 +1078,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA5D48D1766DF7737F3B5695A67C564A /* Build configuration list for PBXNativeTarget "SteviaLayout" */ = {
+		B485DC759D64BABBF2BC349B40D7D84E /* Build configuration list for PBXNativeTarget "SteviaLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D93CA80B37313BC0C4772888E57BDBDC /* Debug */,
-				636FE80391077C12474DD161AE6242CB /* Release */,
+				B7C319C6F37EE5D13333DED50DA5B18C /* Debug */,
+				7A09051095AB3D73C541CEA7EC061045 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAD3E1A0319AC6083343496D05194CE6 /* Build configuration list for PBXNativeTarget "ViewAnimator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD35FAEFC804BA02B34A7F03AE72031 /* Debug */,
+				45064C2FBB886D649A2A6B960EDF234A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2937AEC07CFC9ABA14E7712F4B7552E /* Build configuration list for PBXNativeTarget "Pods-StarterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7A314B197136EA3675DFC68758BDA61 /* Debug */,
+				9C5161F480C85A2CF1212CCB38D4CC29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

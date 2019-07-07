@@ -78,6 +78,8 @@ class CollectionView<Section,Item>: UICollectionView, UICollectionViewDataSource
         self.height = height
         self.isSquare = isSquare
         backgroundColor = .clear
+        showsHorizontalScrollIndicator = false
+        showsVerticalScrollIndicator = false
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
