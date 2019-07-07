@@ -141,6 +141,57 @@ class PlantDetailController: ViewController {
         $0.currentPageIndicatorTintColor = .white
     }
     
+    lazy var back = UIButton().then {
+        $0.style(imageName: "back")
+        $0.onTap { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    let share = UIButton().then {
+        $0.style(imageName: "share")
+    }
+    
+    lazy var plantImageView = UIImageView().then {
+        let overlay = UIView().then { $0.backgroundColor = UIColor.black.withAlphaComponent(0.1) }
+        $0.sv(overlay)
+        overlay.fillContainer()
+        $0.style(plant.image, mode: .scaleAspectFit, bgColor: .plantBG)
+        $0.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 30)
+        $0.isUserInteractionEnabled = true
+    }
+    
+    let detailView = UIView().then {
+        $0.backgroundColor = .white
+        $0.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 40)
+    }
+    
+    lazy var titleLabel = UILabel().then {
+        $0.style(plant.name, font: .header(30), color: .plantColor)
+    }
+    
+    lazy var favButton = UIButton().then {
+        $0.style(bgColor: .favBG)
+        $0.layer.cornerRadius = 13
+        let fav = UIImageView().then { $0.style(plant.favImage, tint: plant.favTint) }
+        $0.sv(fav)
+        fav.size(30).centerInContainer()
+        $0.onTap { [weak self] _ in
+            guard let plant = self?.plant else { return }
+            plant.isFav.toggle()
+            fav.style(plant.favImage, tint: plant.favTint)
+        }
+    }
+    
+    lazy var descLabel = UILabel().then { $0.style(plant.desc, font: .title(18), color: .plantColor, isMultiLine: true) }
+    
+    let collectionView = CollectionView<Any,UIColor>(.horizontal, animator: .cube).then {
+        $0.isPagingEnabled = true
+        $0.register(PlantCollectionCell.self)
+        $0.configureCell = { $0.dequeueCell(PlantCollectionCell.self, at: $1, with: $2) }
+        $0.update(List.dataSource(sections: .empty, items: [[.favBG, .plantBG, .favBG, .plantBG]]))
+    }
+    
     var plant: Plant!
     
     convenience init(_ plant: Plant) {
@@ -149,55 +200,33 @@ class PlantDetailController: ViewController {
     }
     
     override func render() {
-        let back = UIButton().then {
-            $0.style(imageName: "back")
-            $0.onTap { [weak self] _ in
-                self?.navigationController?.popViewController(animated: true)
-            }
-        }
-        let share = UIButton().then {
-            $0.style(imageName: "share")
-        }
-        let plantImageView = UIImageView().then {
-            let overlay = UIView().then { $0.backgroundColor = UIColor.black.withAlphaComponent(0.1) }
-            $0.sv(overlay)
-            overlay.fillContainer()
-            $0.style(plant.image, mode: .scaleAspectFit, bgColor: .plantBG)
-            $0.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 30)
-            $0.isUserInteractionEnabled = true
-        }
-        let detailView = UIView().then {
-            $0.backgroundColor = .white
-            $0.roundCorners([.layerMinXMinYCorner, .layerMaxXMinYCorner], radius: 40)
-        }
-        let titleLabel = UILabel().then {
-            $0.style(plant.name, font: .header(30), color: .plantColor)
-        }
-        let favButton = UIButton().then {
-            $0.style(bgColor: .favBG)
-            $0.layer.cornerRadius = 13
-            let fav = UIImageView().then { $0.style(plant.favImage, tint: plant.favTint) }
-            $0.sv(fav)
-            fav.size(30).centerInContainer()
-            $0.onTap { [weak self] _ in
-                guard let plant = self?.plant else { return }
-                plant.isFav.toggle()
-                fav.style(plant.favImage, tint: plant.favTint)
-            }
-        }
-        let descLabel = UILabel().then { $0.style(plant.desc, font: .title(18), color: .plantColor, isMultiLine: true) }
-        view.sv(plantImageView.sv(back, share), detailView.sv(titleLabel, descLabel), favButton, pageControl)
+        view.sv(plantImageView.sv(back, share), detailView, favButton, pageControl)
+        detailView.vStack(titleLabel, descLabel, collectionView).fillContainer()
         plantImageView.top(44).left(10).right(10).heightEqualsWidth()
         detailView.left(10).right(10).bottom(0)
+        collectionView.height(200).bottom(20).fill()
         plantImageView.Bottom == detailView.Top + 40
         back.size(24).top(20).left(30)
         share.size(30).top(20).right(30)
-        titleLabel.top(20).left(20)
-        descLabel.left(20).right(20)
-        descLabel.Top == titleLabel.Bottom + 10
+        titleLabel.top(20).left(20).right(20).bottom(0)
+        descLabel.left(20).right(20).top(10).bottom(0)
         favButton.size(52).right(10%)
         favButton.Bottom == detailView.Top + 22
         pageControl.centerHorizontally()
         pageControl.Bottom == detailView.Top - 10
+    }
+}
+
+class PlantCollectionCell: CollectionViewCell, Configurable {
+    
+    let card = UIView().then { $0.layer.cornerRadius = 8 }
+    
+    override func render() {
+        sv(card)
+        card.fillContainer(10)
+    }
+    
+    func configure(_ item: UIColor) {
+        card.backgroundColor = item
     }
 }

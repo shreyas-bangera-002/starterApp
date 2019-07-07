@@ -157,19 +157,19 @@ extension UIView {
         layer.masksToBounds = true
     }
     
-    @discardableResult
-    func size(_ points: CGFloat) -> UIView {
-        return width(points).height(points)
-    }
-    
-    @discardableResult
-    func centerInContainer() -> UIView {
-        return centerVertically().centerHorizontally()
-    }
-    
-    @discardableResult
-    func fillContainer() -> UIView {
-        return top(0).bottom(0).left(0).right(0)
+    func fill() {
+        if topConstraint == nil {
+            top(0)
+        }
+        if leftConstraint == nil {
+            left(0)
+        }
+        if rightConstraint == nil {
+            right(0)
+        }
+        if bottomConstraint == nil {
+            bottom(0)
+        }
     }
     
     func addGesture(_ gestureRecognizer: UIGestureRecognizer) {

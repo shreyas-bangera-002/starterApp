@@ -7,26 +7,32 @@
 //
 
 import UIKit
+import AnimatedCollectionViewLayout
 
-class LeftAlignedCollectionViewFlowLayout: UICollectionViewFlowLayout {
+enum LayoutAnimator {
+    case none, card, parallax, zoomInOut, rotateInOut, cube, crossFade, page, snap
     
-    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-        let attributes = super.layoutAttributesForElements(in: rect)
-        
-        var leftMargin = sectionInset.left
-        var maxY: CGFloat = -1.0
-        attributes?.forEach { layoutAttribute in
-            if layoutAttribute.frame.origin.y >= maxY {
-                leftMargin = sectionInset.left
-            }
-            
-            layoutAttribute.frame.origin.x = leftMargin
-            
-            leftMargin += layoutAttribute.frame.width + minimumInteritemSpacing
-            maxY = max(layoutAttribute.frame.maxY, maxY)
+    var value: LayoutAttributesAnimator? {
+        switch self {
+        case .parallax:
+            return ParallaxAttributesAnimator()
+        case .zoomInOut:
+            return ZoomInOutAttributesAnimator()
+        case .rotateInOut:
+            return RotateInOutAttributesAnimator()
+        case .cube:
+            return CubeAttributesAnimator()
+        case .card:
+            return LinearCardAttributesAnimator()
+        case .none:
+            return nil
+        case .crossFade:
+            return CrossFadeAttributesAnimator()
+        case .page:
+            return PageAttributesAnimator()
+        case .snap:
+            return SnapInAttributesAnimator()
         }
-        
-        return attributes
     }
 }
 
@@ -44,6 +50,7 @@ class CollectionView<Section,Item>: UICollectionView, UICollectionViewDataSource
     var configureCell: ((CollectionView<Section,Item>, IndexPath, Item) -> UICollectionViewCell)?
     
     convenience init(_ scrollDirection: UICollectionView.ScrollDirection,
+                     animator: LayoutAnimator = .none,
                      lineSpacing: CGFloat = 0,
                      itemSpacing: CGFloat = 0,
                      widthFactor: CGFloat = 1,
@@ -52,12 +59,13 @@ class CollectionView<Section,Item>: UICollectionView, UICollectionViewDataSource
                      height: CGFloat? = nil,
                      isSquare: Bool = false,
                      isDynamic: Bool = false) {
-        let flowLayout = UICollectionViewFlowLayout()
+        let layout = AnimatedCollectionViewLayout()
+        layout.animator = animator.value
         if isDynamic {
-            flowLayout.itemSize = UICollectionViewFlowLayout.automaticSize
+            layout.itemSize = UICollectionViewFlowLayout.automaticSize
         }
-        flowLayout.scrollDirection = scrollDirection
-        self.init(frame: .zero, collectionViewLayout: flowLayout)
+        layout.scrollDirection = scrollDirection
+        self.init(frame: .zero, collectionViewLayout: layout)
         dataSource = self
         delegate = self
         self.lineSpacing = lineSpacing
@@ -67,6 +75,7 @@ class CollectionView<Section,Item>: UICollectionView, UICollectionViewDataSource
         self.width = width
         self.height = height
         self.isSquare = isSquare
+        backgroundColor = .clear
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -109,7 +118,7 @@ class CollectionView<Section,Item>: UICollectionView, UICollectionViewDataSource
         didDeSelect?(self, indexPath, item)
     }
     
-    func updateItems(_ items: [List<Section,Item>]) {
+    func update(_ items: [List<Section,Item>]) {
         data = items
         reloadData()
     }
@@ -119,6 +128,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .clear
         render()
     }
     
