@@ -6,7 +6,17 @@ target 'StarterApp' do
   use_frameworks!
 
   # Pods for StarterApp
+  plugin 'cocoapods-keys', {
+      :project => "StarterApp",
+      :target => "StarterApp",
+      :keys => [
+      "MarvelApiKey",
+      "MarvelPrivateKey"
+      ]}
 pod 'SteviaLayout'
 pod 'AnimatedCollectionViewLayout'
 pod "ViewAnimator"
+pod 'ws'
+pod 'CryptoSwift'
+pod 'Kingfisher'
 end

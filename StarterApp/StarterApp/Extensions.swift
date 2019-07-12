@@ -8,6 +8,7 @@
 
 import UIKit
 import Stevia
+import Kingfisher
 
 extension NSObject {
     func inject(_ callback: @escaping () -> Void) {
@@ -421,10 +422,23 @@ extension UIImageView {
         layer.masksToBounds = true
         backgroundColor = bgColor
     }
+    
+    func load(_ path: String) {
+        guard let url = URL(string: path) else { return }
+        kf.indicatorType = .activity
+        (kf.indicator?.view as? UIActivityIndicatorView)?.color = UIColor.red.withAlphaComponent(0.8)
+        kf.setImage(with: url)
+    }
 }
 
 extension NSAttributedString {
     static func text(_ text: String, font: UIFont, color: UIColor) -> NSMutableAttributedString {
         return NSMutableAttributedString(string: text, attributes: [.font : font, .foregroundColor: color])
+    }
+}
+
+extension Dictionary {
+    static func += (lhs: inout [Key: Value], rhs: [Key: Value]) {
+        rhs.forEach { lhs[$0] = $1}
     }
 }

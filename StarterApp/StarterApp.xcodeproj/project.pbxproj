@@ -18,6 +18,7 @@
 		1397BE6622B4E68100591C79 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1397BE6522B4E68100591C79 /* CollectionView.swift */; };
 		1397BE6822B4E6CA00591C79 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1397BE6722B4E6CA00591C79 /* TableView.swift */; };
 		1397BE6A22B4F04900591C79 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1397BE6922B4F04900591C79 /* HomeController.swift */; };
+		13B3CB8422D8264100B5BCE2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B3CB8322D8264100B5BCE2 /* Api.swift */; };
 		13E8846522D0665F00741B54 /* PlantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E8846422D0665F00741B54 /* PlantController.swift */; };
 		A4115271B75351E5F5AB3A9B /* Pods_StarterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2807C01F56E78397F3E9CC /* Pods_StarterApp.framework */; };
 /* End PBXBuildFile section */
@@ -36,6 +37,7 @@
 		1397BE6522B4E68100591C79 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
 		1397BE6722B4E6CA00591C79 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		1397BE6922B4F04900591C79 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
+		13B3CB8322D8264100B5BCE2 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
 		13E8846422D0665F00741B54 /* PlantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantController.swift; sourceTree = "<group>"; };
 		BE2807C01F56E78397F3E9CC /* Pods_StarterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3729358CBFA41713E3A1D3 /* Pods-StarterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarterApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarterApp/Pods-StarterApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				1397BE6922B4F04900591C79 /* HomeController.swift */,
 				13E8846422D0665F00741B54 /* PlantController.swift */,
 				1397BE4D22B4A50C00591C79 /* ViewController.swift */,
+				13B3CB8322D8264100B5BCE2 /* Api.swift */,
 				1397BE6522B4E68100591C79 /* CollectionView.swift */,
 				1397BE6722B4E6CA00591C79 /* TableView.swift */,
 				1397BE5F22B4A99200591C79 /* Protocols.swift */,
@@ -186,17 +189,31 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-StarterApp/Pods-StarterApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AnimatedCollectionViewLayout/AnimatedCollectionViewLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/Arrow/Arrow.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Keys/Keys.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SteviaLayout/Stevia.framework",
 				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
+				"${BUILT_PRODUCTS_DIR}/thenPromise/then.framework",
+				"${BUILT_PRODUCTS_DIR}/ws/ws.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AnimatedCollectionViewLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Arrow.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Keys.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Stevia.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/then.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ws.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -237,6 +254,7 @@
 				1397BE5E22B4A7D300591C79 /* Constraint.swift in Sources */,
 				1397BE6622B4E68100591C79 /* CollectionView.swift in Sources */,
 				1397BE6422B4E34700591C79 /* Scene.swift in Sources */,
+				13B3CB8422D8264100B5BCE2 /* Api.swift in Sources */,
 				1397BE4E22B4A50C00591C79 /* ViewController.swift in Sources */,
 				1397BE6A22B4F04900591C79 /* HomeController.swift in Sources */,
 				1397BE6822B4E6CA00591C79 /* TableView.swift in Sources */,

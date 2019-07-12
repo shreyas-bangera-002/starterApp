@@ -1,24 +1,55 @@
 PODS:
+  - Alamofire (4.8.2)
   - AnimatedCollectionViewLayout (0.6.0)
+  - Arrow (5.0.0)
+  - CryptoSwift (1.0.0)
+  - Keys (1.0.1)
+  - Kingfisher (5.4.0)
   - SteviaLayout (4.5.0)
+  - thenPromise (5.0.0)
   - ViewAnimator (2.5.1)
+  - ws (5.0.0):
+    - Alamofire (~> 4.8.2)
+    - Arrow (~> 5.0.0)
+    - thenPromise (~> 5.0.0)
 
 DEPENDENCIES:
   - AnimatedCollectionViewLayout
+  - CryptoSwift
+  - Keys (from `Pods/CocoaPodsKeys`)
+  - Kingfisher
   - SteviaLayout
   - ViewAnimator
+  - ws
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alamofire
     - AnimatedCollectionViewLayout
+    - Arrow
+    - CryptoSwift
+    - Kingfisher
     - SteviaLayout
+    - thenPromise
     - ViewAnimator
+    - ws
+
+EXTERNAL SOURCES:
+  Keys:
+    :path: Pods/CocoaPodsKeys
 
 SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   AnimatedCollectionViewLayout: f2c4e8dda4e3f1678ad6c0b39273a31b19bc935d
+  Arrow: ac60441ee99f2e648e441d4ee8b29fe1d65fbe75
+  CryptoSwift: d81eeaa59dc5a8d03720fe919a6fd07b51f7439f
+  Keys: a576f4c9c1c641ca913a959a9c62ed3f215a8de9
+  Kingfisher: 9c8f2cc6710334e06f32ba2b45e77707d5e2f0c9
   SteviaLayout: aa64a62810544348c9e328a6521cb9160fa82ec6
+  thenPromise: 02f1650627feed7b0e2e6a815bc04a168c9f9ede
   ViewAnimator: 173932c659a43c5a15c665878750d92801ae2cf1
+  ws: ded0903a44c989593ea028cbe97d6249dfad998c
 
-PODFILE CHECKSUM: 5d29670cd2b7b969cc549994e7935a1aaaf33af9
+PODFILE CHECKSUM: 5e69a9b224c6c60d8a760942c290642bd833b6a1
 
 COCOAPODS: 1.5.3

@@ -9,6 +9,8 @@
 import UIKit
 import Stevia
 import ViewAnimator
+import Arrow
+import then
 
 extension UIColor {
     static let plantBG = #colorLiteral(red: 0.9255588055, green: 0.9253922701, blue: 0.9339988828, alpha: 1)
@@ -17,6 +19,36 @@ extension UIColor {
     static let light = #colorLiteral(red: 0.1521505713, green: 0.2935601175, blue: 0.2960677743, alpha: 1)
     static let temp = #colorLiteral(red: 0.2951364517, green: 0.443002224, blue: 0.4495908618, alpha: 1)
     static let water = UIColor.temp
+}
+
+enum MarvelApi: ApiType {
+    case characters
+    
+    var endpoint: String {
+        switch self {
+        case .characters:
+            return "/v1/public/characters"
+        }
+    }
+}
+
+class Character: ModelType {
+    
+    required init() {}
+    
+    var id = -1
+    var name = ""
+    var desc = ""
+    
+    func deserialize(_ json: JSON) {
+        id <-- json["id"]
+        name <-- json["name"]
+        desc <-- json["description"]
+    }
+    
+    static func fetch() -> Promise<[Character]> {
+        return Api.service(MarvelApi.characters)
+    }
 }
 
 enum Criteria: String {
@@ -130,6 +162,7 @@ class PlantViewModel {
     
     init() {
         data = original
+        Character.fetch().then { print($0) }
     }
     
     func query(_ text: String?) {
@@ -137,7 +170,7 @@ class PlantViewModel {
             data = original
             return
         }
-        data = original.filter { $0.name.lowercased().contains(text.lowercased()) }
+        data = original.filter { $0.name.caseInsensitiveCompare(text) == .orderedSame }
     }
 }
 
