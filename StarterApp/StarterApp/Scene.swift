@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
     
     enum Scene {
-        case home, welcome, plant, plantDetail(Plant)
+        case home, welcome, plant//, plantDetail(Plant)
     }
     
     static func controller(_ scene: Scene) -> ViewController {
@@ -21,9 +21,9 @@ extension UIViewController {
         case .welcome:
             return WelcomeController()
         case .plant:
-            return PlantController()
-        case let .plantDetail(plant):
-            return PlantDetailController(plant)
+            return MarvelCharacterController()
+//        case let .plantDetail(plant):
+//            return PlantDetailController(plant)
         }
     }
     

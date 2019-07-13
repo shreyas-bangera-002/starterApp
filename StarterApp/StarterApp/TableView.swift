@@ -41,12 +41,16 @@ class TableView<Section,Item>: UITableView, UITableViewDataSource, UITableViewDe
     var footerHeight: ((Int) -> CGFloat)?
     var configureCell: ((TableView<Section,Item>, IndexPath, Item) -> UITableViewCell)?
     
-    convenience init() {
-        self.init(frame: .zero, style: .plain)
+    init() {
+        super.init(frame: .zero, style: .plain)
         backgroundColor = .clear
         tableFooterView = UIView()
         dataSource = self
         delegate = self
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -93,10 +97,11 @@ class TableView<Section,Item>: UITableView, UITableViewDataSource, UITableViewDe
         return data[section].section.isNil ? 0 : footerHeight?(section) ?? 0
     }
     
-    func update(_ items: [List<Section,Item>]) {
-        isExpanded = Array(repeating: true, count: items.count)
-        original = items
-        data = items
+    func update(_ sections: [Section?] = .empty, items: [[Item]?] = .empty) {
+        let list = List.dataSource(sections: sections, items: items)
+        isExpanded = Array(repeating: true, count: list.count)
+        original = list
+        data = list
         reloadData()
     }
     

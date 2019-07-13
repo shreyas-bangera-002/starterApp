@@ -50,7 +50,7 @@ class HomeController: ViewController, WelcomeDelegate {
         $0.configureCell = { table, index, item in
             return table.dequeueCell(HomeTableCell.self, at: index, with: item)
         }
-        $0.update(List.dataSource(sections: sections, items: [First.strings, Second.strings]))
+        $0.update(sections, items: [First.strings, Second.strings])
     }
     
     lazy var red = UIButton().then {

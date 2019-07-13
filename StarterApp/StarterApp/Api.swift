@@ -33,7 +33,7 @@ struct Api {
     
     static func service<T: ModelType>(_ api: ApiType, method: MethodType = .get, params: Params = Params()) -> Promise<[T]> {
         let webService = WS("https://gateway.marvel.com")
-        webService.logLevels = .debug
+//        webService.logLevels = .debug
         return Promise { resolve, reject in
             switch method {
             case .get:

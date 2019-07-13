@@ -19,7 +19,7 @@
 		1397BE6822B4E6CA00591C79 /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1397BE6722B4E6CA00591C79 /* TableView.swift */; };
 		1397BE6A22B4F04900591C79 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1397BE6922B4F04900591C79 /* HomeController.swift */; };
 		13B3CB8422D8264100B5BCE2 /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B3CB8322D8264100B5BCE2 /* Api.swift */; };
-		13E8846522D0665F00741B54 /* PlantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E8846422D0665F00741B54 /* PlantController.swift */; };
+		13E8846522D0665F00741B54 /* MarvelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E8846422D0665F00741B54 /* MarvelController.swift */; };
 		A4115271B75351E5F5AB3A9B /* Pods_StarterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE2807C01F56E78397F3E9CC /* Pods_StarterApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		1397BE6722B4E6CA00591C79 /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
 		1397BE6922B4F04900591C79 /* HomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		13B3CB8322D8264100B5BCE2 /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
-		13E8846422D0665F00741B54 /* PlantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantController.swift; sourceTree = "<group>"; };
+		13E8846422D0665F00741B54 /* MarvelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelController.swift; sourceTree = "<group>"; };
 		BE2807C01F56E78397F3E9CC /* Pods_StarterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF3729358CBFA41713E3A1D3 /* Pods-StarterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarterApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-StarterApp/Pods-StarterApp.release.xcconfig"; sourceTree = "<group>"; };
 		F585E0D6D8A0F37D1FBA24EF /* Pods-StarterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarterApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StarterApp/Pods-StarterApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 			children = (
 				1397BE4B22B4A50C00591C79 /* AppDelegate.swift */,
 				1397BE6922B4F04900591C79 /* HomeController.swift */,
-				13E8846422D0665F00741B54 /* PlantController.swift */,
+				13E8846422D0665F00741B54 /* MarvelController.swift */,
 				1397BE4D22B4A50C00591C79 /* ViewController.swift */,
 				13B3CB8322D8264100B5BCE2 /* Api.swift */,
 				1397BE6522B4E68100591C79 /* CollectionView.swift */,
@@ -249,7 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13E8846522D0665F00741B54 /* PlantController.swift in Sources */,
+				13E8846522D0665F00741B54 /* MarvelController.swift in Sources */,
 				1397BE6222B4E13700591C79 /* Extensions.swift in Sources */,
 				1397BE5E22B4A7D300591C79 /* Constraint.swift in Sources */,
 				1397BE6622B4E68100591C79 /* CollectionView.swift in Sources */,

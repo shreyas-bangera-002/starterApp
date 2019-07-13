@@ -71,12 +71,12 @@ class Label: UILabel {
 }
 
 class TextField: UITextField, UITextFieldDelegate {
-    convenience init(left: CGFloat = 0, right: CGFloat = 0, color: UIColor = .blue) {
+    convenience init(left: CGFloat = 0, right: CGFloat = 0, cursorColor: UIColor = .blue) {
         self.init(frame: .zero)
         delegate = self
         leftPadding(left)
         rightPadding(right)
-        tintColor = color
+        tintColor = cursorColor
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

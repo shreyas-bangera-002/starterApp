@@ -51,7 +51,7 @@ class CollectionView<Section,Item>: UICollectionView, UICollectionViewDataSource
     var didScrollToIndex: ((IndexPath) -> Void)?
     var didScrollToOffset: ((CGFloat) -> Void)?
     
-    convenience init(_ scrollDirection: UICollectionView.ScrollDirection,
+    init(_ scrollDirection: UICollectionView.ScrollDirection,
                      animator: LayoutAnimator = .none,
                      lineSpacing: CGFloat = 0,
                      itemSpacing: CGFloat = 0,
@@ -67,7 +67,7 @@ class CollectionView<Section,Item>: UICollectionView, UICollectionViewDataSource
             layout.itemSize = UICollectionViewFlowLayout.automaticSize
         }
         layout.scrollDirection = scrollDirection
-        self.init(frame: .zero, collectionViewLayout: layout)
+        super.init(frame: .zero, collectionViewLayout: layout)
         dataSource = self
         delegate = self
         self.lineSpacing = lineSpacing
@@ -80,6 +80,10 @@ class CollectionView<Section,Item>: UICollectionView, UICollectionViewDataSource
         backgroundColor = .clear
         showsHorizontalScrollIndicator = false
         showsVerticalScrollIndicator = false
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -122,8 +126,8 @@ class CollectionView<Section,Item>: UICollectionView, UICollectionViewDataSource
         didDeSelect?(self, indexPath, item)
     }
     
-    func update(_ items: [List<Section,Item>]) {
-        data = items
+    func update(_ sections: [Section?] = .empty, items: [[Item]?] = .empty) {
+        data = List.dataSource(sections: sections, items: items)
         reloadData()
     }
     
