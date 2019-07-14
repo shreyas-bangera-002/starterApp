@@ -11,7 +11,7 @@ import UIKit
 extension UIViewController {
     
     enum Scene {
-        case home, welcome, plant//, plantDetail(Plant)
+        case home, welcome, character, characterDetail(Character)
     }
     
     static func controller(_ scene: Scene) -> ViewController {
@@ -20,10 +20,10 @@ extension UIViewController {
             return HomeController()
         case .welcome:
             return WelcomeController()
-        case .plant:
+        case .character:
             return MarvelCharacterController()
-//        case let .plantDetail(plant):
-//            return PlantDetailController(plant)
+        case let .characterDetail(character):
+            return CharacterDetailController(character)
         }
     }
     
@@ -35,6 +35,7 @@ extension UIViewController {
         let ctlr = UIViewController.controller(scene).then {
             $0.scene = scene
             $0.delegate = delegate
+            $0.transition = transition
         }
         switch transition {
         case .root:

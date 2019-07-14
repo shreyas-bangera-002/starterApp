@@ -40,6 +40,7 @@ class Character: ModelType {
     var name = ""
     var imagePath = ""
     var imageExtension = ""
+    var comicsPage = ""
     var thumbnail: String {
         return imagePath + "." + imageExtension
     }
@@ -56,6 +57,7 @@ class Character: ModelType {
         name <-- json["name"]
         imagePath <-- json["thumbnail.path"]
         imageExtension <-- json["thumbnail.extension"]
+        comicsPage <-- json["comics.collectionURI"]
     }
     
     static func fetch() -> Promise<[Character]> {
@@ -97,8 +99,11 @@ class MarvelCharacterController: ViewController {
         table.separatorStyle = .none
         table.register(CharacterCell.self)
         table.configureCell = { $0.dequeueCell(CharacterCell.self, at: $1, with: $2) }
-//        $0.didSelect = { [weak self] in self?.navigate(to: .plantDetail($2), transition: .push) }
-        CharacterViewModel.onUpdate = { table.update(items: [$0]) }
+        table.didSelect = { [weak self] in self?.navigate(to: .characterDetail($2), transition: .push) }
+        CharacterViewModel.onUpdate = {
+            table.update(items: [$0])
+            table.animate(animations: [AnimationType.from(direction: .bottom, offset: 80)], duration: 1)
+        }
     }
     
     override func render() {
@@ -137,7 +142,6 @@ class CharacterCell: TableViewCell, Configurable {
     let bgView = UIView().then {
         $0.roundCorners([.layerMaxXMinYCorner, .layerMinXMaxYCorner], radius: 20)
         $0.backgroundColor = .plantBG
-        $0.layer.masksToBounds = true
     }
     
     let characterImageView = UIImageView().then { $0.style() }
@@ -156,7 +160,7 @@ class CharacterCell: TableViewCell, Configurable {
     var character: Character!
     
     override func render() {
-        sv(bgView.sv(favButton, characterImageView, titleLabel))
+        sv(bgView.sv(characterImageView, titleLabel, favButton))
         bgView.top(0).left(0).right(0).bottom(20).height(200)
         characterImageView.fill()
         titleLabel.left(20).bottom(20)
@@ -167,10 +171,53 @@ class CharacterCell: TableViewCell, Configurable {
         character = item
         titleLabel.text = item.name
         characterImageView.load(item.thumbnail)
+        characterImageView.hero.id = "\(item.id)"
         favButton.image(item.favImage, tint: item.favTint)
     }
 }
 
+class CharacterDetailController: ViewController {
+    
+    let character: Character
+    
+    lazy var back = UIButton().then {
+        $0.style(imageName: "back")
+        $0.onTap { [weak self] _ in
+            self?.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    lazy var characterImageView = UIImageView().then {
+        $0.style(character.thumbnail,mode: .scaleAspectFill)
+        $0.hero.id = "\(character.id)"
+        $0.layer.cornerRadius = 8
+    }
+    
+    lazy var collectionView = CollectionView<Any,String>(.horizontal, animator: .snap, widthFactor: 0.5).then {
+        $0.contentInset.left = 20
+        $0.register(CharacterCollectionCell.self)
+        $0.configureCell = { $0.dequeueCell(CharacterCollectionCell.self, at: $1, with: $2) }
+        $0.update(.empty, items: [["Comics", "Series", "Stories"]])
+        $0.animate(animations: [AnimationType.from(direction: .right, offset: 80)], delay: 0.5, duration: 1)
+    }
+    
+    init(_ character: Character) {
+        self.character = character
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func render() {
+        view.vStack(characterImageView, collectionView).top(20).fill()
+        view.sv(back)
+        back.size(30).top(60).left(40)
+        characterImageView.fill(20).heightEqualsWidth()
+        collectionView.bottom(50).fill()
+    }
+}
 //class PlantDetailController: ViewController {
 //
 //    let pageControl = UIPageControl().then {
@@ -259,35 +306,25 @@ class CharacterCell: TableViewCell, Configurable {
 //    }
 //}
 
-//class PlantCollectionCell: CollectionViewCell, Configurable {
-//
-//    let card = UIView().then { $0.layer.cornerRadius = 8 }
-//
-//    let image = UIImageView().then {
-//        $0.style(mode: .scaleAspectFit)
-//        $0.animate(animations: [AnimationType.rotate(angle: 360)], delay: 0.3, duration: 1)
-//    }
-//
-//    let criteriaLabel = UILabel().then { $0.style(font: .title(16), color: UIColor.white.withAlphaComponent(0.5)) }
-//
-//    let valueLabel = UILabel().then { $0.style(font: .header(24), color: .white) }
-//
-//    override func render() {
-//        sv(card.sv(image, criteriaLabel, valueLabel))
-//        card.fillContainer(10)
-//        image.size(44).top(20).left(10)
-//        criteriaLabel.left(20).right(10)
-//        valueLabel.left(20).right(10).bottom(10)
-//        criteriaLabel.Bottom == valueLabel.Top - 4
-//    }
-//
-//    func configure(_ item: String) {
-////        card.backgroundColor = item.color
-////        image.image(item.criteria.image)
-////        criteriaLabel.text = item.criteria.value
-////        valueLabel.text = item.value
-//    }
-//}
+class CharacterCollectionCell: CollectionViewCell, Configurable {
+
+    let card = UIView().then {
+        $0.layer.cornerRadius = 8
+        $0.backgroundColor = UIColor.purple.withAlphaComponent(0.5)
+    }
+
+    let titleLabel = UILabel().then { $0.style(font: .title(16)) }
+
+    override func render() {
+        sv(card.sv(titleLabel))
+        card.fillContainer(10)
+        titleLabel.left(20).bottom(20)
+    }
+
+    func configure(_ item: String) {
+        titleLabel.text = item
+    }
+}
 
 //class PlantImageCell: CollectionViewCell, Configurable {
 //    

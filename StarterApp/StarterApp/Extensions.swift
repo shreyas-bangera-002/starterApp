@@ -152,31 +152,45 @@ extension UIView {
         layer.borderWidth = width
     }
     
-    func roundedEdges(_ points: CGFloat) {
+    @discardableResult
+    func roundedEdges(_ points: CGFloat) -> UIView {
         height(points)
         layer.cornerRadius = points/2
         layer.masksToBounds = true
+        return self
     }
     
-    func circle(_ diameter: CGFloat) {
+    @discardableResult
+    func circle(_ diameter: CGFloat) -> UIView {
         size(diameter)
         layer.cornerRadius = diameter/2
         layer.masksToBounds = true
+        return self
     }
     
-    func fill() {
+    @discardableResult
+    func size(_ value: CGFloat, radius: CGFloat = 0) -> UIView {
+        size(value)
+        layer.cornerRadius = radius
+        layer.masksToBounds = true
+        return self
+    }
+    
+    @discardableResult
+    func fill(_ padding: CGFloat = 0) -> UIView {
         if topConstraint == nil {
-            top(0)
+            top(padding)
         }
         if leftConstraint == nil {
-            left(0)
+            left(padding)
         }
         if rightConstraint == nil {
-            right(0)
+            right(padding)
         }
         if bottomConstraint == nil {
-            bottom(0)
+            bottom(padding)
         }
+        return self
     }
     
     func addGesture(_ gestureRecognizer: UIGestureRecognizer) {
@@ -406,6 +420,7 @@ extension UIView {
     func roundCorners(_ corners: CACornerMask = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner, .layerMaxXMaxYCorner], radius: CGFloat = 0) {
         layer.maskedCorners = corners
         layer.cornerRadius = radius
+        layer.masksToBounds = true
     }
 }
 
@@ -415,8 +430,10 @@ extension UIImageView {
         if let tint = tint {
             image = UIImage(named: name)?.withRenderingMode(.alwaysTemplate)
             tintColor = tint
+        } else if let img = UIImage(named: name) {
+            image = img
         } else {
-            image(name)
+            load(name)
         }
         layer.cornerRadius = radius
         layer.masksToBounds = true

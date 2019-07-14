@@ -7,15 +7,21 @@
 //
 
 import UIKit
+import Hero
 
 class ViewController: UIViewController {
 
-    var scene: Scene!
+    var scene: Scene?
+    var transition: Transition?
     weak var delegate: Delegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        if transition == .overlay {
+            view.backgroundColor = .clear
+        }
+        hero.isEnabled = true
         render()
         setupUI()
     }

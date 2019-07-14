@@ -26,10 +26,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func appLaunched() {
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = UINavigationController(rootViewController: UIViewController.controller(.plant))
-            .then {
+        let navCtlr = UINavigationController(rootViewController: UIViewController.controller(.character)).then {
             $0.isNavigationBarHidden = true
+            $0.hero.isEnabled = true
+            $0.hero.navigationAnimationType = .fade
+            $0.hero.modalAnimationType = .selectBy(presenting:.zoom, dismissing:.zoomOut)
         }
+        window?.rootViewController = navCtlr
         window?.makeKeyAndVisible()
     }
 }
